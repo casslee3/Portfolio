@@ -1,0 +1,73 @@
+@import "@fontsource-variable/inter";
+@import "tailwindcss";
+
+/*
+ * Design tokens
+ * -------------
+ * Colours are defined once as CSS variables and exposed to Tailwind as
+ * semantic utilities (bg-surface, text-fg-muted, border-line, ...).
+ * Components never reference raw palette colours, so light/dark mode is
+ * handled entirely here. Every text pairing meets WCAG 2.2 AA (4.5:1+).
+ *
+ * Theme resolution (via the native light-dark() function):
+ *   1. data-theme="light" | "dark" on <html> (set by the theme toggle)
+ *   2. otherwise the OS preference (prefers-color-scheme)
+ */
+:root {
+  color-scheme: light dark;
+  --canvas: light-dark(#f6f6f8, #0b0b10);
+  --surface: light-dark(#ffffff, #14141b);
+  --surface-muted: light-dark(#f0f0f3, #1d1d26);
+  --fg: light-dark(#16161d, #f4f4f5);
+  --fg-muted: light-dark(#52525b, #a8a8b3);
+  --line: light-dark(#d4d4dc, #2c2c38);
+  --accent: light-dark(#4338ca, #a5b4fc);
+  --on-accent: light-dark(#ffffff, #1e1b4b);
+  --positive: light-dark(#166534, #86efac);
+  --positive-bg: light-dark(#dcfce7, #0b2e1a);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-positive: var(--positive);
+  --color-positive-bg: var(--positive-bg);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem; /* keep anchored headings clear of the sticky header */
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* One consistent, high-contrast focus indicator for every interactive element. */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  /* Progressive enhancement: panels only collapse into tabs once JS is running. */
+  .js [role="tabpanel"]:not(.is-active) {
+    display: none;
+  }
+}

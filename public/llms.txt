@@ -1,0 +1,20 @@
+# Cassandra Lee
+
+> Product and interaction designer with 8+ years of experience shipping accessible, data-informed experiences for consumer and enterprise products. Open to senior product design roles. Based in San Francisco, CA; open to remote.
+
+## Contact
+
+- Email: hello@example.com
+- LinkedIn: https://www.linkedin.com/in/your-handle
+- Résumé: https://example.com/resume.pdf
+
+## Selected case studies
+
+- [Redesigning checkout for 40M monthly shoppers](https://example.com/case-studies/checkout-redesign/): Northwind, 2025. +12% conversion, −30% drop-off.
+- [An accessible design system for six product teams](https://example.com/case-studies/accessible-design-system/): Contoso, 2024. 120+ WCAG 2.2 AA components, −40% handoff time.
+- [Motion-led onboarding for a creator app](https://example.com/case-studies/creator-onboarding/): Fabrikam, 2022. +18% day-7 retention.
+- [Turning an ops dashboard into a decision tool](https://example.com/case-studies/operations-dashboard/): Contoso, 2023. −35% task time.
+
+## Skills
+
+Product design, interaction design, prototyping, design systems, accessibility (WCAG 2.2), user research, experimentation.
