@@ -1,6 +1,5 @@
 @import "@fontsource-variable/inter";
-@import "@fontsource/arima/500.css";
-@import "@fontsource/arima/700.css";
+@import "@fontsource-variable/playfair-display";
 @import "tailwindcss";
 
 /*
@@ -40,7 +39,7 @@
 
 @theme inline {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Arima", ui-serif, Georgia, serif;
+  --font-display: "Playfair Display Variable", ui-serif, Georgia, "Times New Roman", serif;
   --color-canvas: var(--canvas);
   --color-surface: var(--surface);
   --color-surface-muted: var(--surface-muted);
