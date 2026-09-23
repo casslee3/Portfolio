@@ -28,16 +28,21 @@ Tailwind only emits the utility classes used in `index.html`, so unused CSS neve
 ## Structure
 
 ```
-index.html            Page markup, SEO meta and JSON-LD structured data
-src/css/main.css      Tailwind entry + design tokens (light/dark via light-dark())
-src/js/main.js        JS entry: wires up the modules below
-src/js/theme.js       Light/dark toggle (persists choice, follows OS by default)
-src/js/tabs.js        Accessible Work/About tabs (APG pattern, hash deep-links)
-src/js/copy-email.js  Copy-email button with screen-reader announcement
-public/js/init.js     Tiny blocking script: applies saved theme before first paint
-public/               Static files copied as-is (favicon, robots.txt, sitemap, llms.txt)
-scripts/a11y.mjs      Automated accessibility audit
+index.html              Page markup, SEO meta and JSON-LD structured data
+src/css/main.css        Tailwind entry, design tokens (light/dark via light-dark()) and shared component classes
+src/js/main.js          JS entry: wires up the modules below
+src/js/theme.js         Light/dark toggle (persists choice, follows OS by default)
+src/js/nav.js           Mobile menu disclosure (aria-expanded, Escape to close)
+src/js/typewriter.js    One-shot hero typing effect (skipped for reduced motion)
+src/js/principles.js    "How I think" highlight cycle with a pause button
+src/js/motion.js        Shared prefers-reduced-motion check
+src/js/copy-email.js    Copy-email button with screen-reader announcement
+public/js/init.js       Tiny blocking script: applies saved theme before first paint
+public/                 Static files copied as-is (favicon, robots.txt, sitemap, llms.txt)
+scripts/a11y.mjs        Automated accessibility audit (light/dark × desktop/mobile)
 ```
+
+Page sections, top to bottom: floating nav → hero with stats → featured case studies → product approach → about → recruiter FAQ and contact → footer.
 
 ### Theming
 
@@ -47,7 +52,8 @@ All colours are semantic tokens in `src/css/main.css` (`bg-surface`, `text-fg-mu
 
 - Semantic landmarks (`header`, `nav`, `aside`, `main`, `footer`), a single `h1` and logical heading order
 - Skip link, visible `:focus-visible` ring on every control, targets ≥ 40px
-- ARIA tabs with roving tabindex and arrow/Home/End keys; still usable without JavaScript
+- Mobile menu is a proper disclosure button; FAQ uses native `<details>` (keyboard accessible without JS)
+- Auto-cycling principles can be paused (WCAG 2.2.2); the typing effect runs once, under 5 seconds
 - Theme toggle exposed as a pressed/unpressed button; copy feedback in a `role="status"` live region
 - Respects `prefers-reduced-motion` and `prefers-color-scheme`
 
@@ -68,4 +74,6 @@ Everything below is placeholder content. Replace it before publishing:
 - [ ] `https://example.com` in the canonical URL, OG tags, JSON-LD, `robots.txt`, `sitemap.xml` and `llms.txt`
 - [ ] Add `public/resume.pdf` and `public/og-image.png` (1200×630)
 - [ ] Create the case-study pages linked from the cards (`/case-studies/<slug>/`)
+- [ ] Replace the gradient mock visuals in each case-study card with real screenshots (`<img>` with alt text)
+- [ ] Replace the hero stats and recruiter FAQ answers with your own
 - [ ] Optional: swap the initials avatar for a portrait `<img>` with descriptive `alt` text

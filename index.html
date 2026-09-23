@@ -8,7 +8,7 @@
     <title>Cassandra Lee — Product &amp; Interaction Designer</title>
     <meta
       name="description"
-      content="Cassandra Lee is a product and interaction designer who ships accessible, data-informed experiences at scale. Case studies in checkout, design systems, onboarding and enterprise tools. Open to senior product design roles."
+      content="Cassandra Lee is a product and interaction designer who turns messy, high-stakes workflows into clear, scalable products. Case studies with measurable impact in SaaS, checkout, onboarding and enterprise tools."
     />
     <meta name="author" content="Cassandra Lee" />
     <meta name="robots" content="index, follow" />
@@ -19,7 +19,7 @@
     <meta property="og:title" content="Cassandra Lee — Product &amp; Interaction Designer" />
     <meta
       property="og:description"
-      content="Accessible, data-informed product design at scale. Selected case studies and contact details."
+      content="I turn messy workflows into simple, scalable products. Featured case studies, product approach and contact details."
     />
     <meta property="og:url" content="https://example.com/" />
     <meta property="og:image" content="https://example.com/og-image.png" />
@@ -30,8 +30,8 @@
 
     <!-- Browser chrome matches the active colour scheme -->
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f6f6f8" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0b0b10" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fbfaff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0b14" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
     <!-- Structured data: helps search engines and AI answer engines understand who this is -->
@@ -44,23 +44,17 @@
           "@type": "Person",
           "name": "Cassandra Lee",
           "jobTitle": "Product & Interaction Designer",
-          "description": "Product and interaction designer specialising in accessible, data-informed experiences for large-scale consumer and enterprise products.",
+          "description": "Product and interaction designer who turns messy, high-stakes workflows into clear, scalable products for SaaS and consumer platforms.",
           "email": "mailto:hello@example.com",
           "url": "https://example.com/",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "San Francisco",
-            "addressRegion": "CA",
-            "addressCountry": "US"
-          },
           "knowsAbout": [
             "Product design",
             "Interaction design",
+            "Workflow design",
             "Design systems",
             "Accessibility (WCAG 2.2)",
             "Prototyping",
-            "User research",
-            "A/B testing"
+            "User research"
           ],
           "sameAs": ["https://www.linkedin.com/in/your-handle", "https://github.com/casslee3"]
         }
@@ -74,47 +68,52 @@
   <body class="min-h-dvh bg-canvas font-sans text-fg antialiased">
     <a
       href="#main"
-      class="sr-only z-50 rounded-md bg-accent px-4 py-2 font-medium text-on-accent focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      class="sr-only z-50 rounded-full bg-accent px-4 py-2 font-medium text-on-accent focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
     >
       Skip to main content
     </a>
 
-    <!-- ============ SITE HEADER ============ -->
-    <header class="sticky top-0 z-40 border-b border-line bg-surface/90 backdrop-blur">
-      <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-        <a href="/" class="flex items-center gap-2 font-semibold tracking-tight" aria-label="Cassandra Lee, home">
-          <span class="grid size-9 place-items-center rounded-lg bg-fg text-sm font-bold text-canvas" aria-hidden="true"
-            >CL</span
-          >
-          <span class="hidden sm:inline">Cassandra Lee</span>
-        </a>
+    <!-- Decorative page glow (matches the soft gradient of the reference design) -->
+    <div
+      class="pointer-events-none fixed inset-x-0 top-0 -z-10 h-[40rem] bg-radial-[at_50%_0%] from-glow-1 via-glow-2/40 to-transparent to-70%"
+      aria-hidden="true"
+    ></div>
 
-        <nav aria-label="Primary" class="flex items-center gap-2">
-          <ul class="flex items-center gap-1 sm:gap-2">
-            <li>
-              <a
-                href="/resume.pdf"
-                class="inline-flex min-h-10 items-center rounded-full px-3 text-sm font-medium text-fg-muted hover:bg-surface-muted hover:text-fg"
-                >Résumé <span class="sr-only">(PDF)</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="inline-flex min-h-10 items-center rounded-full bg-accent px-4 text-sm font-semibold text-on-accent hover:opacity-90"
-                >Get in touch</a
-              >
-            </li>
-          </ul>
+    <!-- ============ FLOATING NAV ============ -->
+    <header class="fixed inset-x-0 top-4 z-40 px-4">
+      <nav
+        aria-label="Primary"
+        class="relative mx-auto flex max-w-4xl items-center justify-between gap-2 rounded-full border border-line bg-surface/85 py-2 ps-5 pe-2 shadow-lg shadow-black/5 backdrop-blur"
+      >
+        <a href="/" class="font-display text-xl font-bold text-accent" aria-label="Cassandra Lee, home">Cassandra</a>
+
+        <ul
+          id="primary-menu"
+          data-open="false"
+          class="absolute inset-x-0 top-full mt-2 hidden flex-col gap-1 rounded-3xl border border-line bg-surface p-3 shadow-lg data-[open=true]:flex md:static md:mt-0 md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0 md:shadow-none"
+        >
+          <li><a href="#work" class="nav-link">Featured work</a></li>
+          <li><a href="#approach" class="nav-link">Approach</a></li>
+          <li><a href="#about" class="nav-link">About me</a></li>
+          <li>
+            <a href="/resume.pdf" class="nav-link">Résumé <span class="sr-only">(PDF)</span></a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-1">
+          <a
+            href="#contact"
+            class="hidden min-h-10 items-center rounded-full bg-accent px-4 text-sm font-semibold text-on-accent hover:opacity-90 sm:inline-flex"
+            >Get in touch</a
+          >
 
           <button
             type="button"
-            class="group grid size-10 place-items-center rounded-full border border-line text-fg-muted hover:bg-surface-muted hover:text-fg"
+            class="group grid size-10 place-items-center rounded-full text-fg-muted hover:bg-surface-muted hover:text-fg"
             aria-pressed="false"
             data-theme-toggle
           >
             <span class="sr-only">Dark mode</span>
-            <!-- Moon: shown while light mode is active -->
             <svg
               class="size-5 group-aria-pressed:hidden"
               viewBox="0 0 24 24"
@@ -126,7 +125,6 @@
             >
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
             </svg>
-            <!-- Sun: shown while dark mode is active -->
             <svg
               class="hidden size-5 group-aria-pressed:block"
               viewBox="0 0 24 24"
@@ -143,354 +141,298 @@
               />
             </svg>
           </button>
-        </nav>
-      </div>
-    </header>
 
-    <div class="mx-auto grid max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[20rem_1fr] lg:gap-8 lg:py-10">
-      <!-- ============ PROFILE SIDEBAR ============ -->
-      <aside aria-labelledby="profile-name" class="lg:sticky lg:top-24 lg:self-start">
-        <div class="rounded-2xl border border-line bg-surface p-6">
-          <!-- Replace the initials with <img src="/images/portrait.avif" alt="Portrait of Cassandra Lee" width="96" height="96"> -->
-          <div
-            class="grid size-24 place-items-center rounded-full bg-linear-to-br from-indigo-600 to-sky-600 text-3xl font-semibold text-white"
-            aria-hidden="true"
+          <button
+            type="button"
+            class="grid size-10 place-items-center rounded-full text-fg-muted hover:bg-surface-muted hover:text-fg md:hidden"
+            aria-controls="primary-menu"
+            aria-expanded="false"
+            data-nav-toggle
           >
-            CL
-          </div>
-
-          <p
-            class="mt-4 inline-flex items-center gap-1.5 rounded-full bg-positive-bg px-3 py-1 text-xs font-semibold text-positive"
-          >
-            <span class="size-2 rounded-full bg-current" aria-hidden="true"></span>
-            Open to senior product design roles
-          </p>
-
-          <h1 id="profile-name" class="mt-3 text-2xl font-semibold tracking-tight">Cassandra Lee</h1>
-          <p class="mt-1 font-medium">Product &amp; Interaction Designer</p>
-
-          <p class="mt-2 flex items-center gap-1.5 text-sm text-fg-muted">
+            <span class="sr-only">Menu</span>
             <svg
-              class="size-4 shrink-0"
+              class="size-5"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
+              stroke-linecap="round"
               aria-hidden="true"
               focusable="false"
             >
-              <path stroke-linejoin="round" d="M12 21s-7-6.1-7-11.5a7 7 0 1 1 14 0C19 14.9 12 21 12 21Z" />
-              <circle cx="12" cy="9.5" r="2.5" />
+              <path d="M4 7h16M4 12h16M4 17h16" />
             </svg>
-            <span><span class="sr-only">Location: </span>San Francisco, CA · Open to remote</span>
-          </p>
-
-          <!-- Headline facts a recruiter scans for first -->
-          <dl class="mt-6 grid grid-cols-2 gap-3 border-t border-line pt-5 text-sm">
-            <div>
-              <dt class="text-fg-muted">Experience</dt>
-              <dd class="font-semibold">8+ years</dd>
-            </div>
-            <div>
-              <dt class="text-fg-muted">Focus</dt>
-              <dd class="font-semibold">Consumer &amp; B2B</dd>
-            </div>
-          </dl>
-
-          <h2 class="mt-5 text-sm text-fg-muted">Experience includes</h2>
-          <ul class="mt-2 flex flex-wrap gap-2 text-sm font-medium">
-            <li class="rounded-full border border-line px-3 py-1">Northwind</li>
-            <li class="rounded-full border border-line px-3 py-1">Contoso</li>
-            <li class="rounded-full border border-line px-3 py-1">Fabrikam</li>
-          </ul>
-
-          <div class="mt-6 flex gap-3">
-            <a
-              href="mailto:hello@example.com"
-              class="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full bg-fg px-4 text-sm font-semibold text-canvas hover:opacity-90"
-            >
-              <svg
-                class="size-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path stroke-linejoin="round" d="m3 7 9 6 9-6" />
-              </svg>
-              Email me
-            </a>
-            <a
-              href="https://www.linkedin.com/in/your-handle"
-              rel="me noopener"
-              class="grid size-11 place-items-center rounded-full border border-line hover:bg-surface-muted"
-            >
-              <span class="sr-only">LinkedIn profile</span>
-              <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path
-                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11Z"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <!-- Section switcher (ARIA tabs). Links keep it usable without JS. -->
-          <div
-            role="tablist"
-            aria-label="Portfolio sections"
-            class="mt-6 grid grid-cols-2 gap-1 rounded-full bg-surface-muted p-1"
-            data-tabs
-          >
-            <a
-              href="#work"
-              role="tab"
-              id="tab-work"
-              aria-controls="work"
-              aria-selected="true"
-              class="inline-flex min-h-10 items-center justify-center rounded-full text-sm font-medium text-fg-muted hover:text-fg aria-selected:bg-surface aria-selected:text-fg aria-selected:shadow-sm"
-              >Work</a
-            >
-            <a
-              href="#about"
-              role="tab"
-              id="tab-about"
-              aria-controls="about"
-              aria-selected="false"
-              tabindex="-1"
-              class="inline-flex min-h-10 items-center justify-center rounded-full text-sm font-medium text-fg-muted hover:text-fg aria-selected:bg-surface aria-selected:text-fg aria-selected:shadow-sm"
-              >About</a
-            >
-          </div>
+          </button>
         </div>
-      </aside>
+      </nav>
+    </header>
 
-      <!-- ============ MAIN CONTENT ============ -->
-      <main id="main" tabindex="-1" class="min-w-0 focus:outline-none">
-        <!-- ---------- Work panel ---------- -->
-        <section
-          id="work"
-          role="tabpanel"
-          aria-labelledby="tab-work"
-          class="is-active rounded-2xl border border-line bg-surface p-6 sm:p-8"
+    <main id="main" tabindex="-1" class="focus:outline-none">
+      <!-- ============ HERO ============ -->
+      <section aria-labelledby="hero-title" class="mx-auto max-w-5xl px-4 pt-36 pb-20 text-center sm:px-6 md:pt-44">
+        <!-- Replace with <img src="/images/portrait.avif" alt="" width="112" height="112"> (decorative next to the name) -->
+        <div
+          class="mx-auto grid size-28 place-items-center rounded-full bg-linear-to-br from-violet-600 to-fuchsia-600 font-display text-4xl font-bold text-white shadow-xl shadow-violet-500/20"
+          aria-hidden="true"
         >
-          <header class="max-w-2xl">
-            <h2 class="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-              I design product experiences that are simple to use and measurable in impact.
-            </h2>
-            <p class="mt-4 text-lg text-pretty text-fg-muted">
-              Eight years turning ambiguous problems into shipped products for millions of people, from end-to-end
-              interaction design and prototyping to design systems and accessibility.
+          CL
+        </div>
+
+        <h1 id="hero-title" class="mt-6 font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
+          Hello! I am Cassandra.
+        </h1>
+
+        <p class="mt-4 min-h-[2.5em] font-display text-2xl text-accent sm:text-3xl">
+          <span aria-hidden="true" data-typewriter>I turn messy workflows into simple products.</span>
+          <span class="sr-only">I turn messy workflows into simple products.</span>
+        </p>
+
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-pretty text-fg-muted">
+          Product &amp; interaction designer shipping end-to-end, 0→1 solutions that balance user needs, business impact
+          and technical constraints.
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href="#work"
+            class="inline-flex min-h-12 items-center rounded-full bg-accent px-6 font-semibold text-on-accent hover:opacity-90"
+            >View featured work</a
+          >
+          <a
+            href="/resume.pdf"
+            class="inline-flex min-h-12 items-center rounded-full border border-line bg-surface px-6 font-semibold hover:bg-surface-muted"
+            >Download résumé <span class="sr-only">(PDF)</span></a
+          >
+        </div>
+
+        <h2 class="sr-only">At a glance</h2>
+        <dl class="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div class="flex flex-col-reverse gap-1">
+            <dt class="text-fg-muted">Years of experience</dt>
+            <dd class="font-display text-3xl font-bold text-accent">8+</dd>
+          </div>
+          <div class="flex flex-col-reverse gap-1">
+            <dt class="text-fg-muted">Flows designed</dt>
+            <dd class="font-display text-3xl font-bold text-accent">400+</dd>
+          </div>
+          <div class="flex flex-col-reverse gap-1">
+            <dt class="text-fg-muted">Users impacted</dt>
+            <dd class="font-display text-3xl font-bold text-accent">2M+</dd>
+          </div>
+          <div class="flex flex-col-reverse gap-1">
+            <dt class="text-fg-muted">Features shipped</dt>
+            <dd class="font-display text-3xl font-bold text-accent">60+</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ============ FEATURED WORK ============ -->
+      <section id="work" aria-labelledby="work-title" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <header class="flex flex-col items-center gap-3 text-center">
+          <p class="eyebrow">Work</p>
+          <h2 id="work-title" class="font-display text-4xl font-medium tracking-tight text-balance">
+            Featured complex projects
+          </h2>
+          <span class="h-px w-18 bg-accent" aria-hidden="true"></span>
+        </header>
+
+        <!-- Replace with your real case studies; keep every outcome quantified. -->
+        <ol class="mt-12 grid gap-8">
+          <li>
+            <article class="case-card" aria-labelledby="cs-checkout">
+              <div class="flex flex-col gap-5">
+                <p class="text-sm text-fg-muted">Northwind · B2C e-commerce · Web &amp; mobile</p>
+                <h3 id="cs-checkout" class="font-display text-3xl font-medium text-balance">
+                  <a href="/case-studies/checkout-redesign/" class="case-link"
+                    >Adaptive checkout lifted conversion by 12%</a
+                  >
+                </h3>
+                <p class="text-fg-muted">
+                  I collapsed a five-step checkout into one adaptive flow, validated through 14 usability sessions and a
+                  staged A/B rollout.
+                </p>
+                <dl class="metric-grid">
+                  <div class="metric">
+                    <dt>checkout conversion</dt>
+                    <dd>+12%</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>fewer drop-offs at payment</dt>
+                    <dd>−30%</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>support tickets about checkout</dt>
+                    <dd>−18%</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="case-visual from-violet-500 via-fuchsia-500 to-orange-300" aria-hidden="true">
+                <div class="mock-window"><span></span><span></span><span></span></div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="case-card" aria-labelledby="cs-design-system">
+              <div class="flex flex-col gap-5">
+                <p class="text-sm text-fg-muted">Contoso · B2B SaaS · Design systems</p>
+                <h3 id="cs-design-system" class="font-display text-3xl font-medium text-balance">
+                  <a href="/case-studies/accessible-design-system/" class="case-link"
+                    >An accessible design system for six product teams</a
+                  >
+                </h3>
+                <p class="text-fg-muted">
+                  I built and governed a token-based component library that brought every core flow to WCAG 2.2 AA.
+                </p>
+                <dl class="metric-grid">
+                  <div class="metric">
+                    <dt>components shipped</dt>
+                    <dd>120+</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>design-to-dev handoff time</dt>
+                    <dd>−40%</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>product teams adopted it</dt>
+                    <dd>6</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="case-visual from-emerald-500 via-teal-500 to-sky-400" aria-hidden="true">
+                <div class="mock-window"><span></span><span></span><span></span></div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="case-card" aria-labelledby="cs-onboarding">
+              <div class="flex flex-col gap-5">
+                <p class="text-sm text-fg-muted">Fabrikam · Consumer app · iOS &amp; Android</p>
+                <h3 id="cs-onboarding" class="font-display text-3xl font-medium text-balance">
+                  <a href="/case-studies/creator-onboarding/" class="case-link"
+                    >Learn-by-doing onboarding raised day-7 retention by 18%</a
+                  >
+                </h3>
+                <p class="text-fg-muted">
+                  I prototyped and shipped an interactive onboarding with reduced-motion alternatives built in from day
+                  one.
+                </p>
+                <dl class="metric-grid">
+                  <div class="metric">
+                    <dt>day-7 retention</dt>
+                    <dd>+18%</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>time to first post</dt>
+                    <dd>−45%</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>onboarding completion</dt>
+                    <dd>81%</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="case-visual from-amber-400 via-orange-500 to-rose-500" aria-hidden="true">
+                <div class="mock-window"><span></span><span></span><span></span></div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="case-card" aria-labelledby="cs-dashboard">
+              <div class="flex flex-col gap-5">
+                <p class="text-sm text-fg-muted">Contoso · Enterprise · Data-dense web app</p>
+                <h3 id="cs-dashboard" class="font-display text-3xl font-medium text-balance">
+                  <a href="/case-studies/operations-dashboard/" class="case-link"
+                    >Turning an ops dashboard into a decision tool</a
+                  >
+                </h3>
+                <p class="text-fg-muted">
+                  I reframed a cluttered dashboard around the decisions operators make, informed by contextual inquiry
+                  with 20 users.
+                </p>
+                <dl class="metric-grid">
+                  <div class="metric">
+                    <dt>task completion time</dt>
+                    <dd>−35%</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>support tickets</dt>
+                    <dd>−22%</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>weekly active operators</dt>
+                    <dd>+27%</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="case-visual from-sky-500 via-blue-600 to-indigo-700" aria-hidden="true">
+                <div class="mock-window"><span></span><span></span><span></span></div>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ PRODUCT APPROACH ============ -->
+      <section
+        id="approach"
+        aria-labelledby="approach-title"
+        class="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 md:grid-cols-[1fr_1.6fr] md:items-center"
+        data-principles
+      >
+        <div class="flex flex-col items-start gap-4">
+          <p class="eyebrow">Product approach</p>
+          <h2 id="approach-title" class="font-display text-4xl font-medium tracking-tight text-balance">
+            How I think through product design
+          </h2>
+          <p class="text-pretty text-fg-muted">
+            I focus on the decisions behind the screen: the workflow, the rules, and the moments where a product either
+            helps or gets in the way.
+          </p>
+          <button
+            type="button"
+            class="inline-flex min-h-10 items-center gap-2 rounded-full border border-line px-4 text-sm font-medium hover:bg-surface-muted"
+            aria-pressed="false"
+            data-principles-toggle
+            hidden
+          >
+            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
+            </svg>
+            Pause animation
+          </button>
+        </div>
+
+        <ul class="flex flex-col gap-3 font-display text-3xl font-medium sm:text-4xl lg:text-5xl">
+          <li class="principle" data-principle>Design workflows, not just UI</li>
+          <li class="principle" data-principle>Optimise the most-used tasks</li>
+          <li class="principle" data-principle>Ship the smallest valuable thing</li>
+          <li class="principle" data-principle>Reuse before you reinvent</li>
+          <li class="principle" data-principle>An edge case is a use case</li>
+        </ul>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about" aria-labelledby="about-title" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div class="grid gap-10 rounded-[2rem] border border-line bg-surface p-6 sm:p-10 md:grid-cols-2">
+          <div class="flex flex-col items-start gap-4">
+            <p class="eyebrow">About me</p>
+            <h2 id="about-title" class="font-display text-4xl font-medium tracking-tight">A little about me</h2>
+            <p class="text-pretty text-fg-muted">
+              I'm a product and interaction designer who works on messy, high-stakes problems and turns them into clear,
+              scalable systems. My strength is understanding how people actually use products, spotting where things
+              fall apart, and fixing them with simple, practical design.
             </p>
-          </header>
-
-          <h3 class="mt-10 text-sm font-semibold tracking-wide text-fg-muted uppercase">Selected case studies</h3>
-
-          <!-- Replace each case study with your own work; keep outcomes quantified. -->
-          <ul class="mt-4 grid gap-6 md:grid-cols-2">
-            <li>
-              <article
-                class="relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas hover:border-fg-muted has-focus-visible:ring-2 has-focus-visible:ring-accent motion-safe:transition"
-                aria-labelledby="cs-checkout"
-              >
-                <div
-                  class="aspect-video bg-linear-to-br from-indigo-500 via-violet-500 to-fuchsia-400"
-                  aria-hidden="true"
-                ></div>
-                <div class="flex flex-1 flex-col p-5">
-                  <p class="text-sm text-fg-muted">Northwind · Lead Product Designer · 2025</p>
-                  <h4 id="cs-checkout" class="mt-1 text-xl font-semibold tracking-tight">
-                    <a
-                      href="/case-studies/checkout-redesign/"
-                      class="after:absolute after:inset-0 focus-visible:outline-none"
-                      >Redesigning checkout for 40M monthly shoppers</a
-                    >
-                  </h4>
-                  <p class="mt-2 text-fg-muted">
-                    Simplified a five-step checkout into a single adaptive flow, validated through 14 usability sessions
-                    and a staged A/B rollout.
-                  </p>
-                  <dl class="mt-4 grid grid-cols-2 gap-3">
-                    <div class="rounded-lg bg-surface-muted p-3">
-                      <dt class="text-xs text-fg-muted">Conversion</dt>
-                      <dd class="text-lg font-semibold">+12%</dd>
-                    </div>
-                    <div class="rounded-lg bg-surface-muted p-3">
-                      <dt class="text-xs text-fg-muted">Drop-off</dt>
-                      <dd class="text-lg font-semibold">−30%</dd>
-                    </div>
-                  </dl>
-                  <ul class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-fg-muted" aria-label="Skills">
-                    <li class="rounded-full border border-line px-2.5 py-1">Interaction design</li>
-                    <li class="rounded-full border border-line px-2.5 py-1">Experimentation</li>
-                    <li class="rounded-full border border-line px-2.5 py-1">Mobile web</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-
-            <li>
-              <article
-                class="relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas hover:border-fg-muted has-focus-visible:ring-2 has-focus-visible:ring-accent motion-safe:transition"
-                aria-labelledby="cs-design-system"
-              >
-                <div
-                  class="aspect-video bg-linear-to-br from-emerald-500 via-teal-500 to-cyan-400"
-                  aria-hidden="true"
-                ></div>
-                <div class="flex flex-1 flex-col p-5">
-                  <p class="text-sm text-fg-muted">Contoso · Senior Product Designer · 2024</p>
-                  <h4 id="cs-design-system" class="mt-1 text-xl font-semibold tracking-tight">
-                    <a
-                      href="/case-studies/accessible-design-system/"
-                      class="after:absolute after:inset-0 focus-visible:outline-none"
-                      >An accessible design system for six product teams</a
-                    >
-                  </h4>
-                  <p class="mt-2 text-fg-muted">
-                    Built and governed a token-based component library, bringing every core flow to WCAG 2.2 AA and
-                    cutting design-to-dev handoff time.
-                  </p>
-                  <dl class="mt-4 grid grid-cols-2 gap-3">
-                    <div class="rounded-lg bg-surface-muted p-3">
-                      <dt class="text-xs text-fg-muted">Components</dt>
-                      <dd class="text-lg font-semibold">120+</dd>
-                    </div>
-                    <div class="rounded-lg bg-surface-muted p-3">
-                      <dt class="text-xs text-fg-muted">Handoff time</dt>
-                      <dd class="text-lg font-semibold">−40%</dd>
-                    </div>
-                  </dl>
-                  <ul class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-fg-muted" aria-label="Skills">
-                    <li class="rounded-full border border-line px-2.5 py-1">Design systems</li>
-                    <li class="rounded-full border border-line px-2.5 py-1">Accessibility</li>
-                    <li class="rounded-full border border-line px-2.5 py-1">Design tokens</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-
-            <li>
-              <article
-                class="relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas hover:border-fg-muted has-focus-visible:ring-2 has-focus-visible:ring-accent motion-safe:transition"
-                aria-labelledby="cs-onboarding"
-              >
-                <div
-                  class="aspect-video bg-linear-to-br from-amber-400 via-orange-500 to-rose-500"
-                  aria-hidden="true"
-                ></div>
-                <div class="flex flex-1 flex-col p-5">
-                  <p class="text-sm text-fg-muted">Fabrikam · Product Designer · 2022</p>
-                  <h4 id="cs-onboarding" class="mt-1 text-xl font-semibold tracking-tight">
-                    <a
-                      href="/case-studies/creator-onboarding/"
-                      class="after:absolute after:inset-0 focus-visible:outline-none"
-                      >Motion-led onboarding for a creator app</a
-                    >
-                  </h4>
-                  <p class="mt-2 text-fg-muted">
-                    Prototyped and shipped an interactive onboarding that teaches by doing, with reduced-motion
-                    alternatives built in from day one.
-                  </p>
-                  <dl class="mt-4 grid grid-cols-2 gap-3">
-                    <div class="rounded-lg bg-surface-muted p-3">
-                      <dt class="text-xs text-fg-muted">Day-7 retention</dt>
-                      <dd class="text-lg font-semibold">+18%</dd>
-                    </div>
-                    <div class="rounded-lg bg-surface-muted p-3">
-                      <dt class="text-xs text-fg-muted">Time to first post</dt>
-                      <dd class="text-lg font-semibold">−45%</dd>
-                    </div>
-                  </dl>
-                  <ul class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-fg-muted" aria-label="Skills">
-                    <li class="rounded-full border border-line px-2.5 py-1">Prototyping</li>
-                    <li class="rounded-full border border-line px-2.5 py-1">Motion design</li>
-                    <li class="rounded-full border border-line px-2.5 py-1">iOS &amp; Android</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-
-            <li>
-              <article
-                class="relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas hover:border-fg-muted has-focus-visible:ring-2 has-focus-visible:ring-accent motion-safe:transition"
-                aria-labelledby="cs-dashboard"
-              >
-                <div
-                  class="aspect-video bg-linear-to-br from-sky-500 via-blue-600 to-indigo-700"
-                  aria-hidden="true"
-                ></div>
-                <div class="flex flex-1 flex-col p-5">
-                  <p class="text-sm text-fg-muted">Contoso · Senior Product Designer · 2023</p>
-                  <h4 id="cs-dashboard" class="mt-1 text-xl font-semibold tracking-tight">
-                    <a
-                      href="/case-studies/operations-dashboard/"
-                      class="after:absolute after:inset-0 focus-visible:outline-none"
-                      >Turning an ops dashboard into a decision tool</a
-                    >
-                  </h4>
-                  <p class="mt-2 text-fg-muted">
-                    Reframed a data-dense enterprise dashboard around the decisions operators make, informed by
-                    contextual inquiry with 20 users.
-                  </p>
-                  <dl class="mt-4 grid grid-cols-2 gap-3">
-                    <div class="rounded-lg bg-surface-muted p-3">
-                      <dt class="text-xs text-fg-muted">Task time</dt>
-                      <dd class="text-lg font-semibold">−35%</dd>
-                    </div>
-                    <div class="rounded-lg bg-surface-muted p-3">
-                      <dt class="text-xs text-fg-muted">Support tickets</dt>
-                      <dd class="text-lg font-semibold">−22%</dd>
-                    </div>
-                  </dl>
-                  <ul class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-fg-muted" aria-label="Skills">
-                    <li class="rounded-full border border-line px-2.5 py-1">B2B SaaS</li>
-                    <li class="rounded-full border border-line px-2.5 py-1">Data visualisation</li>
-                    <li class="rounded-full border border-line px-2.5 py-1">User research</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </section>
-
-        <!-- ---------- About panel ---------- -->
-        <section
-          id="about"
-          role="tabpanel"
-          aria-labelledby="tab-about"
-          tabindex="0"
-          class="rounded-2xl border border-line bg-surface p-6 sm:p-8"
-        >
-          <h2 class="text-3xl font-semibold tracking-tight">About</h2>
-          <div class="mt-4 max-w-2xl space-y-4 text-lg text-pretty text-fg-muted">
-            <p>
-              I'm a product and interaction designer who cares about the details that make software feel effortless. I
-              partner closely with product managers, engineers and researchers to frame the right problem, explore
-              widely, and ship the simplest solution that moves the metric.
-            </p>
-            <p>
-              Accessibility isn't a checklist item for me. It's how I design. Every project I lead meets WCAG 2.2 AA,
-              and I've helped teams build that into their systems and review processes.
+            <p class="text-pretty text-fg-muted">
+              Accessibility is part of how I design, not a checklist at the end. Every project I lead meets WCAG 2.2 AA.
             </p>
           </div>
 
-          <div class="mt-10 grid gap-8 md:grid-cols-2">
-            <section aria-labelledby="skills-heading">
-              <h3 id="skills-heading" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">What I do</h3>
-              <ul class="mt-3 space-y-2">
-                <li>End-to-end product &amp; interaction design</li>
-                <li>High-fidelity prototyping (Figma, ProtoPie, code)</li>
-                <li>Design systems &amp; design tokens</li>
-                <li>Accessibility (WCAG 2.2 AA) &amp; inclusive design</li>
-                <li>User research &amp; experimentation</li>
-              </ul>
-            </section>
-
-            <section aria-labelledby="experience-heading">
-              <h3 id="experience-heading" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">
+          <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+            <section aria-labelledby="experience-title">
+              <h3 id="experience-title" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">
                 Experience
               </h3>
               <ol class="mt-3 space-y-4">
@@ -501,55 +443,160 @@
                 <li>
                   <p class="font-semibold">Senior Product Designer, Contoso</p>
                   <p class="text-sm text-fg-muted">
-                    <time datetime="2021">2021</time> –
-                    <time datetime="2024">2024</time>
+                    <time datetime="2021">2021</time> – <time datetime="2024">2024</time>
                   </p>
                 </li>
                 <li>
                   <p class="font-semibold">Product Designer, Fabrikam</p>
                   <p class="text-sm text-fg-muted">
-                    <time datetime="2018">2018</time> –
-                    <time datetime="2021">2021</time>
+                    <time datetime="2018">2018</time> – <time datetime="2021">2021</time>
                   </p>
                 </li>
               </ol>
             </section>
-          </div>
-        </section>
-      </main>
-    </div>
 
-    <!-- ============ CONTACT / FOOTER ============ -->
-    <footer class="border-t border-line bg-surface" id="contact">
-      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
-        <h2 class="text-2xl font-semibold tracking-tight">Let's work together</h2>
-        <p class="mt-2 max-w-xl text-fg-muted">
-          Hiring for a product or interaction design role? I usually reply within one business day.
-        </p>
-        <div class="mt-6 flex flex-wrap items-center gap-3">
+            <section aria-labelledby="skills-title">
+              <h3 id="skills-title" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">What I do</h3>
+              <ul class="mt-3 flex flex-wrap gap-2 text-sm font-medium">
+                <li class="chip">Product design</li>
+                <li class="chip">Interaction design</li>
+                <li class="chip">Workflow mapping</li>
+                <li class="chip">Prototyping</li>
+                <li class="chip">Design systems</li>
+                <li class="chip">Accessibility</li>
+                <li class="chip">User research</li>
+                <li class="chip">Experimentation</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT / RECRUITER FAQ ============ -->
+      <section
+        id="contact"
+        aria-labelledby="contact-title"
+        class="bg-linear-to-br from-canvas via-canvas to-glow-1 px-4 py-20 sm:px-6"
+      >
+        <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+          <p class="eyebrow">Connect</p>
+          <h2 id="contact-title" class="font-display text-4xl font-medium tracking-tight text-balance">
+            Quick answers for recruiters
+          </h2>
+          <p class="max-w-xl text-pretty text-fg-muted">
+            The questions hiring teams ask me most. Anything else? Email me and I'll reply within one business day.
+          </p>
+          <span class="h-px w-18 bg-accent" aria-hidden="true"></span>
+        </div>
+
+        <div class="mx-auto mt-10 flex max-w-3xl flex-col gap-3">
+          <details class="faq" name="faq" open>
+            <summary>What kind of designer are you?</summary>
+            <p>
+              A product designer for complex workflows: SaaS, operations tools and multi-step consumer flows. I own
+              problems end to end, from framing and research through interaction design, prototyping and launch.
+            </p>
+          </details>
+          <details class="faq" name="faq">
+            <summary>What makes you different?</summary>
+            <p>
+              I design the system behind the screen (rules, states, edge cases), so engineering gets fewer surprises and
+              users get fewer dead ends. Accessibility and measurable outcomes are built in from the start.
+            </p>
+          </details>
+          <details class="faq" name="faq">
+            <summary>How do you work with product, engineering and QA?</summary>
+            <p>
+              I bring engineers in during exploration, share annotated flows with every state documented, and pair with
+              QA on acceptance criteria so what ships matches what we designed.
+            </p>
+          </details>
+          <details class="faq" name="faq">
+            <summary>What proof shows your impact?</summary>
+            <p>
+              Every featured project lists the metrics it moved, including conversion, retention, task time and support
+              volume. Full case studies walk through the data and the decisions behind it.
+            </p>
+          </details>
+        </div>
+
+        <div class="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-3">
           <a
             href="mailto:hello@example.com"
-            class="inline-flex min-h-11 items-center rounded-full bg-accent px-5 font-semibold text-on-accent hover:opacity-90"
-            >hello@example.com</a
+            class="inline-flex min-h-12 items-center rounded-full bg-accent px-6 font-semibold text-on-accent hover:opacity-90"
+            >Email hello@example.com</a
           >
           <button
             type="button"
-            class="inline-flex min-h-11 items-center rounded-full border border-line px-5 font-medium hover:bg-surface-muted"
+            class="inline-flex min-h-12 items-center rounded-full border border-line bg-surface px-6 font-semibold hover:bg-surface-muted"
             data-copy-email="hello@example.com"
             data-copy-status="copy-status"
             hidden
           >
             Copy email
           </button>
-          <a
-            href="/resume.pdf"
-            class="inline-flex min-h-11 items-center rounded-full border border-line px-5 font-medium hover:bg-surface-muted"
-            >Download résumé <span class="sr-only">(PDF)</span></a
-          >
-          <p id="copy-status" role="status" class="text-sm text-fg-muted"></p>
+          <p id="copy-status" role="status" class="w-full text-center text-sm text-fg-muted"></p>
         </div>
-        <p class="mt-10 text-sm text-fg-muted">© 2026 Cassandra Lee. Built with accessibility in mind.</p>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-line bg-surface">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-12 sm:px-6 md:flex-row md:items-end md:justify-between"
+      >
+        <figure class="max-w-xl">
+          <blockquote class="font-display text-2xl font-medium text-balance">
+            <p>“Design is not just what it looks like and feels like. Design is how it works.”</p>
+          </blockquote>
+          <figcaption class="mt-2 text-sm text-fg-muted">— Steve Jobs</figcaption>
+        </figure>
+
+        <ul class="flex gap-3" aria-label="Social profiles">
+          <li>
+            <a href="https://www.linkedin.com/in/your-handle" rel="me noopener" class="social-link">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://dribbble.com/your-handle" rel="me noopener" class="social-link">
+              <span class="sr-only">Dribbble</span>
+              <svg
+                class="size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path
+                  d="M8.5 3.7c3.4 4.4 5.8 10 6.8 16.6M3.1 10.6c5.8.2 10.9-1 15-4.2M5.6 18.4c3.5-4.3 8.4-5.9 15.3-4.7"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/casslee3" rel="me noopener" class="social-link">
+              <span class="sr-only">GitHub</span>
+              <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
+      <p class="border-t border-line px-4 py-4 text-center text-sm text-fg-muted">
+        Designed and built by Cassandra Lee · <span>© 2026</span> · All rights reserved
+      </p>
     </footer>
   </body>
 </html>

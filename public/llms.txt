@@ -10,10 +10,14 @@
 
 ## Selected case studies
 
-- [Redesigning checkout for 40M monthly shoppers](https://example.com/case-studies/checkout-redesign/): Northwind, 2025. +12% conversion, −30% drop-off.
-- [An accessible design system for six product teams](https://example.com/case-studies/accessible-design-system/): Contoso, 2024. 120+ WCAG 2.2 AA components, −40% handoff time.
-- [Motion-led onboarding for a creator app](https://example.com/case-studies/creator-onboarding/): Fabrikam, 2022. +18% day-7 retention.
-- [Turning an ops dashboard into a decision tool](https://example.com/case-studies/operations-dashboard/): Contoso, 2023. −35% task time.
+- [Adaptive checkout lifted conversion by 12%](https://example.com/case-studies/checkout-redesign/): Northwind. +12% checkout conversion, −30% payment drop-off.
+- [An accessible design system for six product teams](https://example.com/case-studies/accessible-design-system/): Contoso. 120+ WCAG 2.2 AA components, −40% handoff time.
+- [Learn-by-doing onboarding raised day-7 retention by 18%](https://example.com/case-studies/creator-onboarding/): Fabrikam. +18% day-7 retention.
+- [Turning an ops dashboard into a decision tool](https://example.com/case-studies/operations-dashboard/): Contoso. −35% task time.
+
+## Product approach
+
+Design workflows, not just UI. Optimise the most-used tasks. Ship the smallest valuable thing. Reuse before you reinvent. An edge case is a use case.
 
 ## Skills
 
