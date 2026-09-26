@@ -72,7 +72,8 @@ Everything below is placeholder content. Replace it before publishing:
 - [ ] Case studies and metrics: use your real work and real numbers only
 - [ ] `hello@example.com` (LinkedIn is set)
 - [ ] `https://example.com` in the canonical URL, OG tags, JSON-LD, `robots.txt`, `sitemap.xml` and `llms.txt`
-- [ ] Add `public/resume.pdf` and `public/og-image.png` (1200×630)
+- [ ] Add `public/og-image.png` (1200×630)
+- [ ] Make sure the résumé Google Doc is shared as "Anyone with the link can view" (or swap the links for a self-hosted `public/resume.pdf`)
 - [ ] Create the case-study pages linked from the cards (`/case-studies/<slug>/`)
 - [ ] Replace the gradient mock visuals in each case-study card with real screenshots (`<img>` with alt text)
 - [ ] Replace the hero stats and recruiter FAQ answers with your own

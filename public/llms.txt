@@ -6,7 +6,7 @@
 
 - Email: hello@example.com
 - LinkedIn: https://www.linkedin.com/in/cassandra-lee-2440b1339
-- Résumé: https://example.com/resume.pdf
+- Résumé: https://docs.google.com/document/d/1q8Pk51UfY1lQzFdb8XqMY_nMJ8bYsZ70QgPSXE17a7w/view?usp=sharing
 
 ## Selected case studies
 
