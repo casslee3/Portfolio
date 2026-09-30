@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         main: resolve(root, "index.html"),
         "bereal-daily-prompt": resolve(root, "case-studies/bereal-daily-prompt/index.html"),
+        "uc-davis-mobile-redesign": resolve(root, "case-studies/uc-davis-mobile-redesign/index.html"),
       },
     },
   },
