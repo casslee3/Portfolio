@@ -77,4 +77,3 @@ Everything below is placeholder content. Replace it before publishing:
 - [ ] Create the case-study pages linked from the cards (`/case-studies/<slug>/`)
 - [ ] Replace the gradient mock visuals in each case-study card with real screenshots (`<img>` with alt text)
 - [ ] Replace the hero stats and recruiter FAQ answers with your own
-- [ ] Optional: swap the initials avatar for a portrait `<img>` with descriptive `alt` text

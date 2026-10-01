@@ -174,12 +174,19 @@
     <main id="main" tabindex="-1" class="focus:outline-none">
       <!-- ============ HERO ============ -->
       <section aria-labelledby="hero-title" class="mx-auto max-w-5xl px-4 pt-36 pb-20 text-center sm:px-6 md:pt-44">
-        <!-- Replace with <img src="/images/portrait.avif" alt="" width="112" height="112"> (decorative next to the name) -->
+        <!-- Portrait is decorative: the name in the heading right below already identifies the person. -->
         <div
-          class="mx-auto grid size-28 place-items-center rounded-full bg-linear-to-br from-violet-600 to-fuchsia-600 font-display text-4xl font-bold text-white shadow-xl shadow-violet-500/20"
-          aria-hidden="true"
+          class="mx-auto size-28 rounded-full bg-linear-to-br from-violet-600 to-fuchsia-600 p-1 shadow-xl shadow-violet-500/20"
         >
-          CL
+          <img
+            src="/images/portrait.webp"
+            width="336"
+            height="336"
+            alt=""
+            fetchpriority="high"
+            decoding="async"
+            class="size-full rounded-full border-2 border-surface object-cover"
+          />
         </div>
 
         <h1 id="hero-title" class="mt-6 font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
