@@ -107,6 +107,22 @@
     @apply grid size-11 place-items-center rounded-full border border-line text-fg-muted hover:bg-surface-muted hover:text-fg;
   }
 
+  /* Pause/play button for an animation. The visible label and icon swap with
+     the data-paused state; the hidden half is display:none, so the accessible
+     name always matches what is shown. */
+  .motion-toggle {
+    @apply inline-flex;
+
+    & span {
+      @apply inline-flex items-center gap-2;
+    }
+
+    &:not([data-paused]) .motion-toggle-play,
+    &[data-paused] .motion-toggle-pause {
+      @apply hidden;
+    }
+  }
+
   /* Decorative flowing lines behind the hero: two seamlessly tiling SVG masks
      filled with the accent colour, drifting in opposite directions. Motion stops
      for prefers-reduced-motion and when the visitor presses pause (WCAG 2.2.2). */

@@ -24,13 +24,13 @@ export function initPrinciples(root) {
       index = (index + 1) % items.length;
       highlight();
     }, INTERVAL_MS);
-    button.setAttribute("aria-pressed", "false");
+    button.removeAttribute("data-paused");
   };
 
   const pause = () => {
     clearInterval(timer);
     timer = undefined;
-    button.setAttribute("aria-pressed", "true");
+    button.toggleAttribute("data-paused", true);
   };
 
   highlight();

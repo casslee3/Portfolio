@@ -270,15 +270,22 @@
 
         <button
           type="button"
-          class="mx-auto mt-10 inline-flex min-h-10 items-center gap-2 rounded-full px-4 text-sm font-medium text-fg-muted hover:bg-surface-muted hover:text-fg"
-          aria-pressed="false"
+          class="motion-toggle mx-auto mt-10 min-h-10 rounded-full px-4 text-sm font-medium text-fg-muted hover:bg-surface-muted hover:text-fg"
           data-waves-toggle
           hidden
         >
-          <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-            <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
-          </svg>
-          Pause background animation
+          <span class="motion-toggle-pause">
+            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
+            </svg>
+            Pause background animation
+          </span>
+          <span class="motion-toggle-play">
+            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            Play background animation
+          </span>
         </button>
       </section>
 
@@ -402,15 +409,22 @@
           </p>
           <button
             type="button"
-            class="inline-flex min-h-10 items-center gap-2 rounded-full border border-line px-4 text-sm font-medium hover:bg-surface-muted"
-            aria-pressed="false"
+            class="motion-toggle min-h-10 rounded-full border border-line px-4 text-sm font-medium hover:bg-surface-muted"
             data-principles-toggle
             hidden
           >
-            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-              <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
-            </svg>
-            Pause animation
+            <span class="motion-toggle-pause">
+              <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
+              </svg>
+              Pause animation
+            </span>
+            <span class="motion-toggle-play">
+              <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Play animation
+            </span>
           </button>
         </div>
 
