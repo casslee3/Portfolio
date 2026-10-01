@@ -28,9 +28,9 @@
   --glow-1: light-dark(#dcebc4, #1d2e14);
   --glow-2: light-dark(#f4eedb, #23211a);
   /* Hero photo frame: neon matcha in light mode, white in dark mode. */
-  --photo-frame: light-dark(#8fd14f, #ffffff);
-  --photo-glow: light-dark(rgb(143 209 79 / 0.7), rgb(255 255 255 / 0.85));
-  --photo-glow-strong: light-dark(rgb(143 209 79 / 0.9), rgb(255 255 255 / 0.95));
+  --photo-frame: light-dark(#a3c26b, #ffffff);
+  --photo-glow: light-dark(rgb(163 194 107 / 0.8), rgb(255 255 255 / 0.85));
+  --photo-glow-strong: light-dark(rgb(163 194 107 / 0.95), rgb(255 255 255 / 0.95));
   --wave-tile: 1440px;
 }
 
