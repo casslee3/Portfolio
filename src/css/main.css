@@ -134,6 +134,27 @@
     }
   }
 
+  /* Hero photo frame: white border with a soft white glow that brightens on hover.
+     A faint dark outer shadow keeps the edge visible on the light theme. */
+  .photo-glow {
+    border: 4px solid #fff;
+    box-shadow:
+      0 0 0 1px rgb(0 0 0 / 0.06),
+      0 0 22px 4px rgb(255 255 255 / 0.85),
+      0 18px 40px -12px rgb(0 0 0 / 0.25);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: box-shadow 400ms ease;
+    }
+
+    &:hover {
+      box-shadow:
+        0 0 0 1px rgb(0 0 0 / 0.06),
+        0 0 34px 10px rgb(255 255 255 / 0.95),
+        0 18px 40px -12px rgb(0 0 0 / 0.25);
+    }
+  }
+
   /* Case study card: the title link stretches over the whole card. */
   .case-card {
     @apply relative grid gap-8 rounded-3xl border border-line bg-surface/80 p-6 shadow-xl shadow-black/5 backdrop-blur has-focus-visible:ring-2 has-focus-visible:ring-accent sm:p-8 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:p-10;
