@@ -70,7 +70,7 @@ Everything below is placeholder content. Replace it before publishing:
 
 - [ ] Name, bio, location, experience and companies (`index.html`, JSON-LD, `public/llms.txt`)
 - [ ] Case studies and metrics: use your real work and real numbers only
-- [ ] `hello@example.com` (LinkedIn is set)
+- [x] Email, LinkedIn, Instagram and GitHub are set
 - [ ] `https://example.com` in the canonical URL, OG tags, JSON-LD, `robots.txt`, `sitemap.xml` and `llms.txt`
 - [ ] Add `public/og-image.png` (1200×630)
 - [ ] Make sure the resume Google Doc is shared as "Anyone with the link can view" (or swap the links for a self-hosted `public/resume.pdf`)
