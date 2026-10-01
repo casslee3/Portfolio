@@ -177,45 +177,50 @@
         aria-labelledby="hero-title"
         class="relative isolate mx-auto max-w-5xl px-4 pt-36 pb-20 text-center sm:px-6 md:pt-44"
       >
-        <div class="wave-accent top-72 h-[26rem] md:top-80" aria-hidden="true"></div>
-        <!-- Hero photo: two sizes so phones download the smaller file. -->
-        <img
-          src="/images/hero-photo-960.webp"
-          srcset="/images/hero-photo-480.webp 480w, /images/hero-photo-960.webp 960w"
-          sizes="(min-width: 640px) 20rem, 70vw"
-          width="960"
-          height="1280"
-          alt="Cassandra at a café table, resting her chin on her hand and smiling as she looks to the side"
-          fetchpriority="high"
-          decoding="async"
-          class="mx-auto aspect-[3/4] w-[70%] max-w-xs rounded-3xl object-cover shadow-xl shadow-black/10"
-        />
+        <div class="wave-accent top-72 h-[26rem] md:top-44 md:h-80" aria-hidden="true"></div>
+        <!-- Intro text on the left, photo on the right (photo sits above the text on phones). -->
+        <div class="grid items-center gap-10 md:grid-cols-[1fr_auto] md:gap-14 md:text-start">
+          <div>
+            <h1 id="hero-title" class="font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
+              Hello! I am Cassandra.
+            </h1>
 
-        <h1 id="hero-title" class="mt-10 font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
-          Hello! I am Cassandra.
-        </h1>
+            <p class="mt-4 min-h-[2.5em] font-display text-2xl text-accent sm:text-3xl">
+              <span aria-hidden="true" data-typewriter>I turn messy workflows into simple products.</span>
+              <span class="sr-only">I turn messy workflows into simple products.</span>
+            </p>
 
-        <p class="mt-4 min-h-[2.5em] font-display text-2xl text-accent sm:text-3xl">
-          <span aria-hidden="true" data-typewriter>I turn messy workflows into simple products.</span>
-          <span class="sr-only">I turn messy workflows into simple products.</span>
-        </p>
+            <p class="mx-auto mt-4 max-w-2xl text-lg text-pretty text-fg-muted md:mx-0">
+              Product &amp; interaction designer shipping end-to-end, 0→1 solutions that balance user needs, business
+              impact and technical constraints.
+            </p>
 
-        <p class="mx-auto mt-4 max-w-2xl text-lg text-pretty text-fg-muted">
-          Product &amp; interaction designer shipping end-to-end, 0→1 solutions that balance user needs, business impact
-          and technical constraints.
-        </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
+              <a
+                href="#work"
+                class="inline-flex min-h-12 items-center rounded-full bg-accent px-6 font-semibold text-on-accent hover:opacity-90"
+                >View featured work</a
+              >
+              <a
+                href="https://docs.google.com/document/d/1q8Pk51UfY1lQzFdb8XqMY_nMJ8bYsZ70QgPSXE17a7w/view?usp=sharing"
+                class="inline-flex min-h-12 items-center rounded-full border border-line bg-surface px-6 font-semibold hover:bg-surface-muted"
+                >View résumé <span class="sr-only">(Google Doc)</span></a
+              >
+            </div>
+          </div>
 
-        <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <a
-            href="#work"
-            class="inline-flex min-h-12 items-center rounded-full bg-accent px-6 font-semibold text-on-accent hover:opacity-90"
-            >View featured work</a
-          >
-          <a
-            href="https://docs.google.com/document/d/1q8Pk51UfY1lQzFdb8XqMY_nMJ8bYsZ70QgPSXE17a7w/view?usp=sharing"
-            class="inline-flex min-h-12 items-center rounded-full border border-line bg-surface px-6 font-semibold hover:bg-surface-muted"
-            >View résumé <span class="sr-only">(Google Doc)</span></a
-          >
+          <!-- Hero photo: two sizes so phones download the smaller file. -->
+          <img
+            src="/images/hero-photo-960.webp"
+            srcset="/images/hero-photo-480.webp 480w, /images/hero-photo-960.webp 960w"
+            sizes="(min-width: 1024px) 16rem, (min-width: 768px) 14rem, 50vw"
+            width="960"
+            height="1280"
+            alt="Cassandra at a café table, resting her chin on her hand and smiling as she looks to the side"
+            fetchpriority="high"
+            decoding="async"
+            class="order-first mx-auto aspect-[3/4] w-1/2 max-w-48 rounded-3xl object-cover shadow-xl shadow-black/10 md:order-none md:w-56 md:max-w-none lg:w-64"
+          />
         </div>
 
         <h2 class="sr-only">At a glance</h2>
