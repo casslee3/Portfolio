@@ -10,10 +10,8 @@
 
 ## Selected case studies
 
-- [Adaptive checkout lifted conversion by 12%](https://example.com/case-studies/checkout-redesign/): Northwind. +12% checkout conversion, −30% payment drop-off.
-- [An accessible design system for six product teams](https://example.com/case-studies/accessible-design-system/): Contoso. 120+ WCAG 2.2 AA components, −40% handoff time.
-- [Learn-by-doing onboarding raised day-7 retention by 18%](https://example.com/case-studies/creator-onboarding/): Fabrikam. +18% day-7 retention.
-- [Turning an ops dashboard into a decision tool](https://example.com/case-studies/operations-dashboard/): Contoso. −35% task time.
+- [Today's Daily Prompt: giving BeReal users a reason to post](https://example.com/case-studies/bereal-daily-prompt/): BeReal PM externship, iOS concept. 89% of test users rated the concept clear; 78% would recommend BeReal because of it.
+- [UC Davis Mobile App Redesign](https://example.com/case-studies/uc-davis-mobile-redesign/): Davis Design Interactive Fellowship, team of 4. Designed the Community and Clubs & Organizations pages for a 2-star campus app.
 
 ## Product approach
 
