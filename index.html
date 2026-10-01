@@ -174,22 +174,24 @@
     <main id="main" tabindex="-1" class="focus:outline-none">
       <!-- ============ HERO ============ -->
       <section aria-labelledby="hero-title" class="mx-auto max-w-5xl px-4 pt-36 pb-20 text-center sm:px-6 md:pt-44">
-        <!-- Portrait is decorative: the name in the heading right below already identifies the person. -->
+        <!-- Hero photo: two sizes so phones download the smaller file. -->
         <div
-          class="mx-auto size-28 rounded-full bg-linear-to-br from-violet-600 to-fuchsia-600 p-1 shadow-xl shadow-violet-500/20"
+          class="mx-auto max-w-xl rounded-[1.75rem] bg-linear-to-br from-violet-600 to-fuchsia-600 p-1 shadow-xl shadow-violet-500/20"
         >
           <img
-            src="/images/portrait.webp"
-            width="336"
-            height="336"
-            alt=""
+            src="/images/hero-photo-1200.webp"
+            srcset="/images/hero-photo-800.webp 800w, /images/hero-photo-1200.webp 1200w"
+            sizes="(min-width: 640px) 36rem, calc(100vw - 2rem)"
+            width="1200"
+            height="900"
+            alt="Cassandra smiling on a park lawn in a cosy sweater, with trees and a white church behind her"
             fetchpriority="high"
             decoding="async"
-            class="size-full rounded-full border-2 border-surface object-cover"
+            class="aspect-[4/3] w-full rounded-3xl object-cover"
           />
         </div>
 
-        <h1 id="hero-title" class="mt-6 font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
+        <h1 id="hero-title" class="mt-10 font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
           Hello! I am Cassandra.
         </h1>
 
