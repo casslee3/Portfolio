@@ -13,7 +13,7 @@
 - [Today's Daily Prompt: giving BeReal users a reason to post](https://example.com/case-studies/bereal-daily-prompt/): BeReal PM externship, iOS concept. 89% of test users rated the concept clear; 78% would recommend BeReal because of it.
 - [UC Davis Mobile App Redesign](https://example.com/case-studies/uc-davis-mobile-redesign/): Davis Design Interactive Fellowship, team of 4. Designed the Community and Clubs & Organizations pages for a 2-star campus app.
 
-## Product approach
+## Design for play
 
 Design workflows, not just UI. Optimise the most-used tasks. Ship the smallest valuable thing. Reuse before you reinvent. An edge case is a use case.
 

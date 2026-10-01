@@ -277,6 +277,8 @@
     width: 3px;
     height: 1em;
     margin-inline-start: 4px;
+    /* Cancel the caret's own width so it never forces the text onto a new line. */
+    margin-inline-end: -7px;
     vertical-align: -0.1em;
     border-radius: 2px;
     background: currentColor;
