@@ -89,6 +89,14 @@
     @apply grid size-11 place-items-center rounded-full border border-line text-fg-muted hover:bg-surface-muted hover:text-fg;
   }
 
+  /* Decorative flowing lines behind the hero. The SVG is a mask filled with the
+     accent colour, so it follows light/dark mode automatically. */
+  .wave-accent {
+    @apply pointer-events-none absolute left-1/2 -z-10 w-screen -translate-x-1/2 opacity-25;
+    background-color: var(--accent);
+    mask: url("../assets/waves.svg") center / 100% 100% no-repeat;
+  }
+
   /* Case study card: the title link stretches over the whole card. */
   .case-card {
     @apply relative grid gap-8 rounded-3xl border border-line bg-surface/80 p-6 shadow-xl shadow-black/5 backdrop-blur has-focus-visible:ring-2 has-focus-visible:ring-accent sm:p-8 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:p-10;
