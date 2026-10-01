@@ -27,6 +27,10 @@
   --on-accent: light-dark(#ffffff, #16200b);
   --glow-1: light-dark(#dcebc4, #1d2e14);
   --glow-2: light-dark(#f4eedb, #23211a);
+  /* Hero photo frame: neon matcha in light mode, white in dark mode. */
+  --photo-frame: light-dark(#8fd14f, #ffffff);
+  --photo-glow: light-dark(rgb(143 209 79 / 0.7), rgb(255 255 255 / 0.85));
+  --photo-glow-strong: light-dark(rgb(143 209 79 / 0.9), rgb(255 255 255 / 0.95));
   --wave-tile: 1440px;
 }
 
@@ -134,13 +138,12 @@
     }
   }
 
-  /* Hero photo frame: white border with a soft white glow that brightens on hover.
-     A faint dark outer shadow keeps the edge visible on the light theme. */
+  /* Hero photo frame: a glowing border (neon matcha in light mode, white in dark
+     mode, via the --photo-* tokens) that brightens on hover. */
   .photo-glow {
-    border: 4px solid #fff;
+    border: 4px solid var(--photo-frame);
     box-shadow:
-      0 0 0 1px rgb(0 0 0 / 0.06),
-      0 0 22px 4px rgb(255 255 255 / 0.85),
+      0 0 22px 4px var(--photo-glow),
       0 18px 40px -12px rgb(0 0 0 / 0.25);
 
     @media (prefers-reduced-motion: no-preference) {
@@ -149,8 +152,7 @@
 
     &:hover {
       box-shadow:
-        0 0 0 1px rgb(0 0 0 / 0.06),
-        0 0 34px 10px rgb(255 255 255 / 0.95),
+        0 0 34px 10px var(--photo-glow-strong),
         0 18px 40px -12px rgb(0 0 0 / 0.25);
     }
   }
