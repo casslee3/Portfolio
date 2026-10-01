@@ -86,6 +86,15 @@
     @apply inline-flex min-h-10 w-full items-center rounded-full px-3 text-sm font-medium text-fg-muted hover:bg-surface-muted hover:text-fg;
   }
 
+  /* Initials monogram used as the home link in the nav. */
+  .logo-mark {
+    @apply grid size-11 place-items-center rounded-full bg-accent font-display text-lg font-bold text-on-accent shadow-md shadow-black/10 hover:rotate-[-8deg] motion-safe:transition-transform;
+
+    & i {
+      @apply ms-px font-medium;
+    }
+  }
+
   .chip {
     @apply rounded-full border border-line px-3 py-1;
   }
