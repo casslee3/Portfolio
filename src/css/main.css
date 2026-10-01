@@ -27,6 +27,7 @@
   --on-accent: light-dark(#ffffff, #16200b);
   --glow-1: light-dark(#dcebc4, #1d2e14);
   --glow-2: light-dark(#f4eedb, #23211a);
+  --wave-tile: 1440px;
 }
 
 :root[data-theme="light"] {
@@ -89,12 +90,48 @@
     @apply grid size-11 place-items-center rounded-full border border-line text-fg-muted hover:bg-surface-muted hover:text-fg;
   }
 
-  /* Decorative flowing lines behind the hero. The SVG is a mask filled with the
-     accent colour, so it follows light/dark mode automatically. */
+  /* Decorative flowing lines behind the hero: two seamlessly tiling SVG masks
+     filled with the accent colour, drifting in opposite directions. Motion stops
+     for prefers-reduced-motion and when the visitor presses pause (WCAG 2.2.2). */
   .wave-accent {
-    @apply pointer-events-none absolute left-1/2 -z-10 w-screen -translate-x-1/2 opacity-25;
+    @apply pointer-events-none absolute left-1/2 -z-10 w-screen -translate-x-1/2 overflow-hidden opacity-25;
+  }
+
+  .wave-layer {
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: calc(100% + var(--wave-tile));
     background-color: var(--accent);
-    mask: url("../assets/waves.svg") center / 100% 100% no-repeat;
+    mask-size: var(--wave-tile) 100%;
+    mask-repeat: repeat-x;
+    animation: wave-drift 48s linear infinite;
+  }
+
+  .wave-layer-a {
+    mask-image: url("../assets/waves-a.svg");
+  }
+
+  .wave-layer-b {
+    mask-image: url("../assets/waves-b.svg");
+    animation-duration: 64s;
+    animation-direction: reverse;
+  }
+
+  .waves-paused .wave-layer {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wave-layer {
+      animation: none;
+    }
+  }
+
+  @keyframes wave-drift {
+    to {
+      transform: translateX(calc(-1 * var(--wave-tile)));
+    }
   }
 
   /* Case study card: the title link stretches over the whole card. */
