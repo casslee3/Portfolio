@@ -86,12 +86,16 @@
     @apply inline-flex min-h-10 w-full items-center rounded-full px-3 text-sm font-medium text-fg-muted hover:bg-surface-muted hover:text-fg;
   }
 
-  /* Initials monogram used as the home link in the nav. */
+  /* Home link in the nav: an outlined flower beside the name; the flower turns on hover. */
   .logo-mark {
-    @apply grid size-11 place-items-center rounded-full bg-accent font-display text-lg font-bold text-on-accent shadow-md shadow-black/10 hover:rotate-[-8deg] motion-safe:transition-transform;
+    @apply flex min-h-11 items-center gap-2 rounded-full font-display text-xl font-bold text-accent;
 
-    & i {
-      @apply ms-px font-medium;
+    & svg {
+      @apply size-8 shrink-0 motion-safe:transition-transform motion-safe:duration-500;
+    }
+
+    &:hover svg {
+      @apply rotate-36;
     }
   }
 
