@@ -16,17 +16,17 @@
  */
 :root {
   color-scheme: light dark;
-  --canvas: light-dark(#fbfaff, #0d0b14);
-  --surface: light-dark(#ffffff, #17141f);
-  --surface-muted: light-dark(#f6f4fa, #211d2b);
-  --fg: light-dark(#0e0e12, #f4f2f8);
-  --fg-muted: light-dark(#55586a, #aca8b8);
-  --line: light-dark(#e2dcee, #332d40);
-  --accent: light-dark(#6b00cc, #caa6ff);
-  --accent-soft: light-dark(#f3e8ff, #2a1a42);
-  --on-accent: light-dark(#ffffff, #1a0633);
-  --glow-1: light-dark(#efd4fa, #3a1d5c);
-  --glow-2: light-dark(#ffe9d6, #2b1730);
+  --canvas: light-dark(#fafbf6, #0c0e0a);
+  --surface: light-dark(#ffffff, #151912);
+  --surface-muted: light-dark(#f2f4ea, #1e231a);
+  --fg: light-dark(#14170f, #f1f3ec);
+  --fg-muted: light-dark(#575e4c, #a9b09c);
+  --line: light-dark(#dce1cf, #2d3326);
+  --accent: light-dark(#4d6b26, #b4d38a);
+  --accent-soft: light-dark(#e8f0da, #1f2b14);
+  --on-accent: light-dark(#ffffff, #16200b);
+  --glow-1: light-dark(#dcebc4, #1d2e14);
+  --glow-2: light-dark(#f4eedb, #23211a);
 }
 
 :root[data-theme="light"] {
