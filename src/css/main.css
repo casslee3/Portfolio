@@ -193,13 +193,18 @@
     }
   }
 
-  /* Case study card: the title link stretches over the whole card. */
+  /* Case study card: the title link stretches over the whole card, and the card
+     grows slightly on hover or keyboard focus (no scaling under reduced motion). */
   .case-card {
-    @apply relative grid gap-8 rounded-3xl border border-line bg-surface/80 p-6 shadow-xl shadow-black/5 backdrop-blur has-focus-visible:ring-2 has-focus-visible:ring-accent sm:p-8 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:p-10;
+    @apply relative grid gap-8 rounded-3xl border border-line bg-surface/80 p-6 shadow-xl shadow-black/5 backdrop-blur hover:shadow-2xl hover:shadow-black/10 has-focus-visible:ring-2 has-focus-visible:ring-accent sm:p-8 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:p-10;
+
+    @media (prefers-reduced-motion: no-preference) {
+      @apply transition duration-300 ease-out hover:scale-[1.03] has-focus-visible:scale-[1.03];
+    }
   }
 
   .case-link {
-    @apply after:absolute after:inset-0 after:rounded-3xl hover:underline focus-visible:outline-none;
+    @apply after:absolute after:inset-0 after:rounded-3xl focus-visible:outline-none;
   }
 
   .metric-grid {
