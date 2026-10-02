@@ -42,7 +42,7 @@ public/                 Static files copied as-is (favicon, robots.txt, sitemap,
 scripts/a11y.mjs        Automated accessibility audit (light/dark × desktop/mobile)
 ```
 
-Page sections, top to bottom: floating nav → hero with passions → featured case studies → fun → about → FAQ and contact → footer.
+Page sections, top to bottom: floating nav → hero with passions → featured case studies → extra → about → FAQ and contact → footer.
 
 ### Theming
 
