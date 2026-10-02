@@ -216,11 +216,29 @@
     }
   }
 
-  /* Hero passions row: items separated by a decorative bar. The empty alt text
-     after "/" keeps screen readers from announcing the bar. */
-  .passion + .passion::before {
-    content: "|" / "";
-    @apply mx-4 font-normal text-fg-muted max-lg:hidden;
+  /* Hero focus areas: an icon in a soft matcha circle above a short label. */
+  .focus-tile {
+    @apply flex flex-col items-center gap-3;
+  }
+
+  .focus-icon {
+    @apply grid size-16 place-items-center rounded-full border border-line bg-accent-soft text-accent shadow-sm sm:size-20;
+
+    & svg {
+      @apply size-8 sm:size-10;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      @apply transition-transform duration-300;
+
+      .focus-tile:hover & {
+        @apply -translate-y-1 rotate-[-6deg];
+      }
+    }
+  }
+
+  .focus-label {
+    @apply text-sm font-semibold text-fg-muted;
   }
 
   /* Decorative flowing lines behind the hero: two seamlessly tiling SVG masks
