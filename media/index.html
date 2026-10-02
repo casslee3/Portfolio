@@ -389,6 +389,159 @@
           </div>
         </div>
       </article>
+
+      <!-- ============ EXTRAS (photo carousel) ============ -->
+      <section id="extras" aria-labelledby="extras-title" class="mx-auto max-w-6xl scroll-mt-28 px-4 py-16 sm:px-6">
+        <header class="flex flex-col items-center gap-3 text-center">
+          <p class="eyebrow">Extras!</p>
+          <h2 id="extras-title" class="font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
+            Made by hand
+          </h2>
+          <p class="max-w-xl text-pretty text-fg-muted">
+            A few things I make when I'm not designing: jewelry and bakes.
+          </p>
+        </header>
+
+        <div
+          class="carousel mx-auto mt-10 max-w-md"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Things I make"
+          data-carousel
+        >
+          <div class="mb-4 flex items-center justify-center gap-2" data-carousel-controls hidden>
+            <button type="button" class="carousel-button" data-carousel-prev>
+              <span class="sr-only">Previous slide</span>
+              <svg
+                class="size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="motion-toggle carousel-button w-auto px-4 text-sm font-medium"
+              data-carousel-toggle
+            >
+              <span class="motion-toggle-pause">
+                <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
+                </svg>
+                Pause slides
+              </span>
+              <span class="motion-toggle-play">
+                <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                Play slides
+              </span>
+            </button>
+            <button type="button" class="carousel-button" data-carousel-next>
+              <span class="sr-only">Next slide</span>
+              <svg
+                class="size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="carousel-viewport" data-carousel-viewport aria-live="off">
+            <div
+              class="carousel-slide"
+              data-slide="Handmade wavy ring"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="1 of 4"
+            >
+              <img
+                src="/images/extras/wavy-ring-960.webp"
+                srcset="/images/extras/wavy-ring-480.webp 480w, /images/extras/wavy-ring-960.webp 960w"
+                sizes="(min-width: 640px) 28rem, 100vw"
+                alt="A gold wire ring bent into soft waves, resting beside dried baby's breath in warm sunlight"
+                loading="lazy"
+                decoding="async"
+                class="aspect-[4/5] w-full rounded-3xl border-4 border-accent-soft object-cover shadow-lg shadow-black/5"
+              />
+              <p class="mt-3 text-center font-display text-xl">Handmade wavy ring</p>
+            </div>
+            <div
+              class="carousel-slide"
+              data-slide="Chocolate layer cake"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="2 of 4"
+            >
+              <img
+                src="/images/extras/chocolate-cake-960.webp"
+                srcset="/images/extras/chocolate-cake-480.webp 480w, /images/extras/chocolate-cake-960.webp 960w"
+                sizes="(min-width: 640px) 28rem, 100vw"
+                alt="A homemade two-layer chocolate cake with speckled buttercream piping and chocolate shavings, sliced to show the inside"
+                loading="lazy"
+                decoding="async"
+                class="aspect-[4/5] w-full rounded-3xl border-4 border-accent-soft object-cover shadow-lg shadow-black/5"
+              />
+              <p class="mt-3 text-center font-display text-xl">Chocolate layer cake</p>
+            </div>
+            <div
+              class="carousel-slide"
+              data-slide="Crème brûlée"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="3 of 4"
+            >
+              <img
+                src="/images/extras/creme-brulee-960.webp"
+                srcset="/images/extras/creme-brulee-480.webp 480w, /images/extras/creme-brulee-960.webp 960w"
+                sizes="(min-width: 640px) 28rem, 100vw"
+                alt="A crème brûlée with a caramelized top, finished with fresh strawberry slices and red bean paste"
+                loading="lazy"
+                decoding="async"
+                class="aspect-[4/5] w-full rounded-3xl border-4 border-accent-soft object-cover shadow-lg shadow-black/5"
+              />
+              <p class="mt-3 text-center font-display text-xl">Crème brûlée</p>
+            </div>
+            <div
+              class="carousel-slide"
+              data-slide="Orange swirl macarons"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="4 of 4"
+            >
+              <img
+                src="/images/extras/macarons-960.webp"
+                srcset="/images/extras/macarons-480.webp 480w, /images/extras/macarons-960.webp 960w"
+                sizes="(min-width: 640px) 28rem, 100vw"
+                alt="Seven homemade macarons with orange marbled shells and a pale yellow filling on a white plate"
+                loading="lazy"
+                decoding="async"
+                class="aspect-[4/5] w-full rounded-3xl border-4 border-accent-soft object-cover shadow-lg shadow-black/5"
+              />
+              <p class="mt-3 text-center font-display text-xl">Orange swirl macarons</p>
+            </div>
+          </div>
+
+          <ol
+            class="mt-4 flex justify-center gap-2"
+            aria-label="Choose a slide"
+            data-carousel-dots
+            data-carousel-controls
+            hidden
+          ></ol>
+        </div>
+      </section>
     </main>
 
     <footer class="border-t border-line bg-surface">

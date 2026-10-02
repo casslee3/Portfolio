@@ -343,6 +343,47 @@
     }
   }
 
+  /* Extras carousel. Without JS the slides form a simple grid; carousel.js adds
+     .is-ready to stack them so only the active slide shows (cross-fade). */
+  .carousel-viewport {
+    @apply grid gap-6 sm:grid-cols-2;
+  }
+
+  .carousel.is-ready .carousel-viewport {
+    @apply grid-cols-1;
+    grid-template-areas: "slide";
+  }
+
+  .carousel.is-ready .carousel-slide {
+    grid-area: slide;
+    @apply invisible opacity-0;
+
+    @media (prefers-reduced-motion: no-preference) {
+      @apply transition-[opacity,visibility] duration-700;
+    }
+
+    &[data-active] {
+      @apply visible opacity-100;
+    }
+  }
+
+  .carousel-button {
+    @apply inline-flex size-11 items-center justify-center gap-2 rounded-full border border-line bg-surface text-fg hover:bg-surface-muted;
+  }
+
+  .carousel-dot {
+    @apply grid size-6 place-items-center rounded-full;
+
+    &::before {
+      content: "";
+      @apply size-2.5 rounded-full border border-accent motion-safe:transition-colors;
+    }
+
+    &[aria-current]::before {
+      @apply bg-accent;
+    }
+  }
+
   /* Media section photo collage: rounded frames that lift slightly on hover. */
   .media-photo {
     @apply size-full rounded-3xl border-4 border-accent-soft object-cover shadow-lg shadow-black/5;
