@@ -1,7 +1,7 @@
 import { prefersReducedMotion } from "./motion.js";
 
 /**
- * Pause/play control for the drifting hero waves and the spinning flower icons
+ * Pause/play control for the hero waves, spinning flower icons and flower rain
  * (WCAG 2.2.2: moving content that lasts more than 5 seconds needs a way to stop
  * it). When reduced motion is requested nothing moves, so the button stays hidden.
  */

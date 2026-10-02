@@ -109,6 +109,34 @@
     }
   }
 
+  /* Background layer of outlined flowers falling down the viewport. Faint and
+     behind all content so text contrast is unaffected. */
+  .flower-rain {
+    @apply pointer-events-none fixed inset-0 -z-10 overflow-hidden text-accent opacity-25;
+  }
+
+  .flower-rain-item {
+    position: absolute;
+    top: 0;
+    width: var(--size);
+    height: var(--size);
+    animation: flower-fall linear infinite;
+
+    & svg {
+      @apply size-full;
+    }
+  }
+
+  @keyframes flower-fall {
+    from {
+      transform: translate3d(0, -10vh, 0) rotate(0);
+    }
+
+    to {
+      transform: translate3d(var(--drift), 110vh, 0) rotate(var(--turn));
+    }
+  }
+
   .chip {
     @apply rounded-full border border-line px-3 py-1;
   }
@@ -168,7 +196,7 @@
     animation-direction: reverse;
   }
 
-  .motion-paused :is(.wave-layer, .flower-spin) {
+  .motion-paused :is(.wave-layer, .flower-spin, .flower-rain-item) {
     animation-play-state: paused;
   }
 
