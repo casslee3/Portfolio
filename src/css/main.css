@@ -153,7 +153,7 @@
     mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 
     & .marquee-list {
-      @apply flex-nowrap pe-2;
+      @apply w-max shrink-0 flex-nowrap pe-2;
       animation: marquee 28s linear infinite;
     }
 
