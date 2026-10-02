@@ -42,7 +42,7 @@ public/                 Static files copied as-is (favicon, robots.txt, sitemap,
 scripts/a11y.mjs        Automated accessibility audit (light/dark × desktop/mobile)
 ```
 
-Page sections, top to bottom: floating nav → hero with stats → featured case studies → fun → about → recruiter FAQ and contact → footer.
+Page sections, top to bottom: floating nav → hero with passions → featured case studies → fun → about → FAQ and contact → footer.
 
 ### Theming
 
@@ -76,4 +76,4 @@ Everything below is placeholder content. Replace it before publishing:
 - [ ] Make sure the resume Google Doc is shared as "Anyone with the link can view" (or swap the links for a self-hosted `public/resume.pdf`)
 - [ ] Create the case-study pages linked from the cards (`/case-studies/<slug>/`)
 - [ ] Replace the gradient mock visuals in each case-study card with real screenshots (`<img>` with alt text)
-- [ ] Replace the hero stats and recruiter FAQ answers with your own
+- [ ] Replace the recruiter FAQ answers with your own
