@@ -402,6 +402,21 @@
     }
   }
 
+  /* iPhone-style frame for vertical Reels: dark bezel, rounded screen and a
+     dynamic-island pill. */
+  .phone-frame {
+    @apply relative m-0 aspect-[9/19.5] rounded-[2.75rem] bg-neutral-900 p-2.5 shadow-xl ring-1 shadow-black/20 ring-black/10;
+
+    &::before {
+      content: "";
+      @apply pointer-events-none absolute top-4 left-1/2 z-10 h-5 w-1/4 -translate-x-1/2 rounded-full bg-black;
+    }
+
+    & video {
+      @apply size-full rounded-[2.25rem] bg-black object-cover;
+    }
+  }
+
   /* Media section photo collage: rounded frames that lift slightly on hover. */
   .media-photo {
     @apply size-full rounded-3xl border-4 border-accent-soft object-cover shadow-lg shadow-black/5;

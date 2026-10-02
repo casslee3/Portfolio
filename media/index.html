@@ -167,15 +167,30 @@
             >
           </div>
 
-          <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-[1.15fr_1fr_1fr] md:grid-rows-2">
+          <div class="grid grid-cols-2 items-center gap-3 sm:gap-4 md:grid-cols-[minmax(0,0.85fr)_1fr_1fr]">
+            <figure class="phone-frame col-span-2 mx-auto w-full max-w-60 md:col-span-1 md:row-span-2 md:max-w-none">
+              <video
+                controls
+                playsinline
+                preload="none"
+                poster="/images/cherie-charms/packaging-reel-poster.webp"
+                aria-describedby="cherie-reel-description"
+              >
+                <source src="/images/cherie-charms/packaging-reel.mp4" type="video/mp4" />
+              </video>
+              <figcaption id="cherie-reel-description" class="sr-only">
+                Instagram Reel: a gold ring is tucked into a white Cherie Charms.Co drawstring pouch, finished with a
+                handwritten thank-you tag.
+              </figcaption>
+            </figure>
             <img
               src="/images/cherie-charms/ring-box-960.webp"
               srcset="/images/cherie-charms/ring-box-480.webp 480w, /images/cherie-charms/ring-box-960.webp 960w"
-              sizes="(min-width: 768px) 25vw, 100vw"
+              sizes="(min-width: 768px) 20vw, 50vw"
               alt="Eight handmade gold wire rings, some woven with pastel beads and one with beaded cherries, displayed in a cream velvet ring box"
               loading="lazy"
               decoding="async"
-              class="media-photo col-span-2 aspect-[4/3] md:col-span-1 md:row-span-2 md:aspect-auto md:h-full"
+              class="media-photo aspect-square"
             />
             <img
               src="/images/cherie-charms/worn-960.webp"
@@ -201,11 +216,11 @@
                 /images/cherie-charms/pearl-earrings-480.webp 480w,
                 /images/cherie-charms/pearl-earrings-960.webp 960w
               "
-              sizes="(min-width: 768px) 40vw, 100vw"
+              sizes="(min-width: 768px) 20vw, 50vw"
               alt="A pair of gold hook earrings with two freshwater pearls each"
               loading="lazy"
               decoding="async"
-              class="media-photo col-span-2 aspect-[2/1] object-[50%_45%]"
+              class="media-photo aspect-square"
             />
           </div>
         </div>
