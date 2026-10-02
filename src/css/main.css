@@ -95,8 +95,7 @@
     }
   }
 
-  /* Slow, continuous spin for the flower icon. Off under reduced motion and
-     paused (with the waves) by the hero's pause button. */
+  /* Slow, continuous spin for the flower icon. Off under reduced motion. */
   @media (prefers-reduced-motion: no-preference) {
     .flower-spin {
       animation: flower-spin 12s linear infinite;
@@ -196,7 +195,7 @@
     animation-direction: reverse;
   }
 
-  .motion-paused :is(.wave-layer, .flower-spin, .flower-rain-item) {
+  .waves-paused .wave-layer {
     animation-play-state: paused;
   }
 
