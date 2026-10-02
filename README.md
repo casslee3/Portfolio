@@ -45,7 +45,7 @@ public/                 Static files copied as-is (favicon, robots.txt, sitemap,
 scripts/a11y.mjs        Automated accessibility audit (light/dark × desktop/mobile)
 ```
 
-Page sections, top to bottom (over a faint falling-flower background): floating nav → hero with focus areas → featured case studies → extras → about → FAQ and contact → footer.
+Page sections, top to bottom (over a faint falling-flower background): floating nav → hero with focus areas → featured case studies → media → about → FAQ and contact → footer.
 
 ### Theming
 
