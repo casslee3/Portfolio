@@ -277,7 +277,7 @@
   }
 
   .metric {
-    @apply flex flex-col-reverse gap-1 rounded-xl border border-line bg-surface-muted p-3;
+    @apply flex flex-col-reverse justify-end gap-1 rounded-xl border border-line bg-surface-muted p-3;
 
     & dt {
       @apply text-sm text-fg-muted;
@@ -349,31 +349,6 @@
 
     @media (prefers-reduced-motion: no-preference) {
       @apply transition-transform duration-300 hover:-translate-y-1;
-    }
-  }
-
-  .faq {
-    @apply rounded-2xl border border-line bg-surface;
-
-    & summary {
-      @apply flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 font-semibold;
-    }
-
-    & summary::-webkit-details-marker {
-      display: none;
-    }
-
-    & summary::after {
-      content: "+";
-      @apply font-display text-2xl text-accent;
-    }
-
-    &[open] summary::after {
-      content: "−";
-    }
-
-    & p {
-      @apply px-5 pb-5 text-fg-muted;
     }
   }
 

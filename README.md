@@ -44,7 +44,7 @@ public/                 Static files copied as-is (favicon, robots.txt, sitemap,
 scripts/a11y.mjs        Automated accessibility audit (light/dark × desktop/mobile)
 ```
 
-Page sections, top to bottom (over a faint falling-flower background): floating nav → hero with focus areas → featured case studies → media (Cherie Charms.Co) → about → FAQ and contact → footer.
+Page sections, top to bottom (over a faint falling-flower background): floating nav → hero with focus areas → featured case studies → media (Cherie Charms.Co) → about → contact → footer.
 
 ### Theming
 
@@ -54,7 +54,7 @@ All colours are semantic tokens in `src/css/main.css` (`bg-surface`, `text-fg-mu
 
 - Semantic landmarks (`header`, `nav`, `aside`, `main`, `footer`), a single `h1` and logical heading order
 - Skip link, visible `:focus-visible` ring on every control, targets ≥ 40px
-- Mobile menu is a proper disclosure button; FAQ uses native `<details>` (keyboard accessible without JS)
+- Mobile menu is a proper disclosure button (aria-expanded, Escape to close)
 - The typing effect runs once, under 5 seconds
 - Theme toggle exposed as a pressed/unpressed button; copy feedback in a `role="status"` live region
 - Respects `prefers-reduced-motion` and `prefers-color-scheme`
@@ -78,4 +78,3 @@ Everything below is placeholder content. Replace it before publishing:
 - [ ] Make sure the resume Google Doc is shared as "Anyone with the link can view" (or swap the links for a self-hosted `public/resume.pdf`)
 - [ ] Create the case-study pages linked from the cards (`/case-studies/<slug>/`)
 - [ ] Replace the gradient mock visuals in each case-study card with real screenshots (`<img>` with alt text)
-- [ ] Replace the recruiter FAQ answers with your own

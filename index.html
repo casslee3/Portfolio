@@ -388,86 +388,73 @@
         </ol>
       </section>
 
-      <!-- ============ MEDIA ============ -->
-      <section id="media" aria-labelledby="media-title" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <div class="grid gap-10 md:grid-cols-[1fr_1.5fr] md:items-center">
-          <div class="flex flex-col items-start gap-4">
-            <p class="eyebrow">Media</p>
-            <h2 id="media-title" class="font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
-              Cherie Charms.Co
-            </h2>
-            <p class="font-semibold text-accent">
-              Founder &amp; designer · <time datetime="2022">2022</time> – Present
-            </p>
-            <p class="text-pretty text-fg-muted">
-              I founded Cherie Charms.Co to handcraft custom bracelets and necklaces from locally sourced materials. I
-              lead product design, material sourcing, e-commerce and marketing, and research consumer trends to shape
-              each new design.
-            </p>
-            <dl class="grid w-full gap-3 sm:grid-cols-2">
-              <div class="flex flex-col-reverse justify-end gap-1 rounded-2xl border border-line bg-surface p-4">
-                <dt class="text-sm text-pretty text-fg-muted">
-                  average views per Reel, from trend-driven products and visual content
-                </dt>
-                <dd class="font-display text-3xl font-bold text-accent">3K</dd>
-              </div>
-              <div class="flex flex-col-reverse justify-end gap-1 rounded-2xl border border-line bg-surface p-4">
-                <dt class="text-sm text-pretty text-fg-muted">
-                  Proceeds donated to the Hearing Loss Association of America, alongside content raising awareness of
-                  hearing loss
-                </dt>
-                <dd class="font-display text-3xl font-bold text-accent">HLAA</dd>
-              </div>
-            </dl>
-            <a
-              href="https://www.instagram.com/cheriecharms.co/"
-              class="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-surface px-5 font-semibold hover:bg-surface-muted"
-              >View on Instagram <span aria-hidden="true">→</span><span class="sr-only">(@cheriecharms.co)</span></a
-            >
-          </div>
+      <!-- ============ MEDIA (preview; full projects live on /media/) ============ -->
+      <section id="media" aria-labelledby="media-title" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <header class="flex flex-col items-center gap-3 text-center">
+          <p class="eyebrow">Media</p>
+          <h2 id="media-title" class="font-display text-4xl font-medium tracking-tight text-balance">
+            Brand &amp; creative work
+          </h2>
+          <span class="h-px w-18 bg-accent" aria-hidden="true"></span>
+        </header>
 
-          <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-[1.15fr_1fr_1fr] md:grid-rows-2">
-            <img
-              src="/images/cherie-charms/ring-box-960.webp"
-              srcset="/images/cherie-charms/ring-box-480.webp 480w, /images/cherie-charms/ring-box-960.webp 960w"
-              sizes="(min-width: 768px) 25vw, 100vw"
-              alt="Eight handmade gold wire rings, some woven with pastel beads and one with beaded cherries, displayed in a cream velvet ring box"
-              loading="lazy"
-              decoding="async"
-              class="media-photo col-span-2 aspect-[4/3] md:col-span-1 md:row-span-2 md:aspect-auto md:h-full"
-            />
-            <img
-              src="/images/cherie-charms/worn-960.webp"
-              srcset="/images/cherie-charms/worn-480.webp 480w, /images/cherie-charms/worn-960.webp 960w"
-              sizes="(min-width: 768px) 20vw, 50vw"
-              alt="A gold wire ring woven with soft blue beads, worn on a hand"
-              loading="lazy"
-              decoding="async"
-              class="media-photo aspect-square"
-            />
-            <img
-              src="/images/cherie-charms/lavender-960.webp"
-              srcset="/images/cherie-charms/lavender-480.webp 480w, /images/cherie-charms/lavender-960.webp 960w"
-              sizes="(min-width: 768px) 20vw, 50vw"
-              alt="Two twisted gold wire rings, one beaded in mint, resting on linen beside dried lavender"
-              loading="lazy"
-              decoding="async"
-              class="media-photo aspect-square"
-            />
-            <img
-              src="/images/cherie-charms/pearl-earrings-960.webp"
-              srcset="
-                /images/cherie-charms/pearl-earrings-480.webp 480w,
-                /images/cherie-charms/pearl-earrings-960.webp 960w
-              "
-              sizes="(min-width: 768px) 40vw, 100vw"
-              alt="A pair of gold hook earrings with two freshwater pearls each"
-              loading="lazy"
-              decoding="async"
-              class="media-photo col-span-2 aspect-[2/1] object-[50%_45%]"
-            />
-          </div>
-        </div>
+        <ul class="mt-12 grid gap-8">
+          <li>
+            <article class="case-card" aria-labelledby="media-cherie">
+              <div class="flex flex-col gap-5">
+                <p class="text-sm text-fg-muted">Small business · Founder &amp; designer · 2022 – Present</p>
+                <h3 id="media-cherie" class="font-display text-3xl font-medium text-balance">
+                  <a href="/media/#cherie-charms" class="case-link">Cherie Charms.Co</a>
+                </h3>
+                <p class="text-pretty text-fg-muted">
+                  A handcrafted jewelry brand I run end to end, from product design and sourcing to e-commerce and
+                  Instagram content.
+                </p>
+                <dl class="metric-grid sm:grid-cols-2">
+                  <div class="metric">
+                    <dt>average views per Reel</dt>
+                    <dd>3K</dd>
+                  </div>
+                  <div class="metric">
+                    <dt>proceeds donated to support hearing loss awareness</dt>
+                    <dd>HLAA</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="grid aspect-[4/3] grid-cols-2 gap-3" aria-hidden="true">
+                <img
+                  src="/images/cherie-charms/ring-box-480.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  class="row-span-2 size-full rounded-2xl object-cover"
+                />
+                <img
+                  src="/images/cherie-charms/worn-480.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  class="size-full rounded-2xl object-cover"
+                />
+                <img
+                  src="/images/cherie-charms/pearl-earrings-480.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  class="size-full rounded-2xl object-cover"
+                />
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <p class="mt-10 text-center">
+          <a
+            href="/media/"
+            class="inline-flex min-h-12 items-center gap-2 rounded-full border border-line bg-surface px-6 font-semibold hover:bg-surface-muted"
+            >View all media projects <span aria-hidden="true">→</span></a
+          >
+        </p>
       </section>
 
       <!-- ============ ABOUT ============ -->
@@ -538,11 +525,11 @@
         </div>
       </section>
 
-      <!-- ============ CONTACT / RECRUITER FAQ ============ -->
+      <!-- ============ CONTACT ============ -->
       <section
         id="contact"
         aria-labelledby="contact-title"
-        class="bg-linear-to-br from-canvas via-canvas to-glow-1 px-4 py-20 sm:px-6"
+        class="bg-linear-to-br from-canvas via-canvas to-glow-1 px-4 py-14 sm:px-6"
       >
         <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
           <p class="eyebrow">Connect</p>
@@ -553,38 +540,7 @@
           <span class="h-px w-18 bg-accent" aria-hidden="true"></span>
         </div>
 
-        <div class="mx-auto mt-10 flex max-w-3xl flex-col gap-3">
-          <details class="faq" name="faq" open>
-            <summary>What kind of designer are you?</summary>
-            <p>
-              A product designer for complex workflows: SaaS, operations tools and multi-step consumer flows. I own
-              problems end to end, from framing and research through interaction design, prototyping and launch.
-            </p>
-          </details>
-          <details class="faq" name="faq">
-            <summary>What makes you different?</summary>
-            <p>
-              I design the system behind the screen (rules, states, edge cases), so engineering gets fewer surprises and
-              users get fewer dead ends. Accessibility and measurable outcomes are built in from the start.
-            </p>
-          </details>
-          <details class="faq" name="faq">
-            <summary>How do you work with product, engineering and QA?</summary>
-            <p>
-              I bring engineers in during exploration, share annotated flows with every state documented, and pair with
-              QA on acceptance criteria so what ships matches what we designed.
-            </p>
-          </details>
-          <details class="faq" name="faq">
-            <summary>What proof shows your impact?</summary>
-            <p>
-              Every featured project lists the metrics it moved, including conversion, retention, task time and support
-              volume. Full case studies walk through the data and the decisions behind it.
-            </p>
-          </details>
-        </div>
-
-        <div class="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-3">
+        <div class="mx-auto mt-6 flex max-w-3xl flex-wrap items-center justify-center gap-3">
           <a
             href="mailto:cxlee@ucdavis.edu"
             class="inline-flex min-h-12 items-center gap-2 rounded-full bg-accent px-6 font-semibold text-on-accent hover:opacity-90"

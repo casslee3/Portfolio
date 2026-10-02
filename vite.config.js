@@ -8,11 +8,12 @@ export default defineConfig({
   plugins: [tailwindcss()],
   build: {
     rollupOptions: {
-      // One entry per HTML page. Add new case studies here.
+      // One entry per HTML page. Add new case studies or pages here.
       input: {
         main: resolve(root, "index.html"),
         "bereal-daily-prompt": resolve(root, "case-studies/bereal-daily-prompt/index.html"),
         "uc-davis-mobile-redesign": resolve(root, "case-studies/uc-davis-mobile-redesign/index.html"),
+        media: resolve(root, "media/index.html"),
       },
     },
   },

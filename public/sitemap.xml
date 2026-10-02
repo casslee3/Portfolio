@@ -3,4 +3,13 @@
   <url>
     <loc>https://example.com/</loc>
   </url>
+  <url>
+    <loc>https://example.com/case-studies/bereal-daily-prompt/</loc>
+  </url>
+  <url>
+    <loc>https://example.com/case-studies/uc-davis-mobile-redesign/</loc>
+  </url>
+  <url>
+    <loc>https://example.com/media/</loc>
+  </url>
 </urlset>
