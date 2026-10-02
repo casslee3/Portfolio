@@ -13,7 +13,8 @@ const between = (min, max) => min + Math.random() * (max - min);
 /**
  * Fills the decorative background layer with outlined flowers that drift down
  * the page. Each flower gets a random column, size, speed and sway. Nothing is
- * rendered when reduced motion is requested.
+ * rendered when reduced motion is requested, and the hero pause button stops
+ * the fall.
  */
 export function initFlowerRain(layer) {
   if (!layer || prefersReducedMotion()) return;

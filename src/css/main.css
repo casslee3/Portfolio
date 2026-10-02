@@ -95,7 +95,8 @@
     }
   }
 
-  /* Slow, continuous spin for the flower icon. Off under reduced motion. */
+  /* Slow, continuous spin for the flower icon. Off under reduced motion and
+     paused (with the flower rain) by the hero's pause button. */
   @media (prefers-reduced-motion: no-preference) {
     .flower-spin {
       animation: flower-spin 12s linear infinite;
@@ -169,7 +170,7 @@
 
   /* Decorative flowing lines behind the hero: two seamlessly tiling SVG masks
      filled with the accent colour, drifting in opposite directions. Motion stops
-     for prefers-reduced-motion and when the visitor presses pause (WCAG 2.2.2). */
+     for prefers-reduced-motion. */
   .wave-accent {
     @apply pointer-events-none absolute left-1/2 -z-10 w-screen -translate-x-1/2 overflow-hidden opacity-25;
   }
@@ -195,7 +196,7 @@
     animation-direction: reverse;
   }
 
-  .waves-paused .wave-layer {
+  .flowers-paused :is(.flower-spin, .flower-rain-item) {
     animation-play-state: paused;
   }
 
