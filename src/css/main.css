@@ -289,7 +289,7 @@
   /* Case study card: the title link stretches over the whole card, and the card
      grows slightly on hover or keyboard focus (no scaling under reduced motion). */
   .case-card {
-    @apply relative grid gap-8 rounded-3xl border border-line bg-surface/80 p-6 shadow-xl shadow-black/5 backdrop-blur hover:shadow-2xl hover:shadow-black/10 has-focus-visible:ring-2 has-focus-visible:ring-accent sm:p-8 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:p-10;
+    @apply relative grid gap-8 rounded-3xl border border-line bg-surface/80 p-6 shadow-xl shadow-black/5 backdrop-blur hover:shadow-2xl hover:shadow-black/10 has-focus-visible:ring-2 has-focus-visible:ring-accent sm:p-8 lg:grid-cols-[1fr_1.5fr] lg:items-center lg:p-10;
 
     @media (prefers-reduced-motion: no-preference) {
       @apply transition duration-300 ease-out hover:scale-[1.03] has-focus-visible:scale-[1.03];
@@ -298,6 +298,37 @@
 
   .case-link {
     @apply after:absolute after:inset-0 after:z-10 after:rounded-3xl focus-visible:outline-none;
+  }
+
+  /* On cards, results read as big headline numbers in one row instead of
+     small tiles. */
+  .case-card .metric-grid {
+    @apply auto-cols-fr grid-flow-col gap-4;
+  }
+
+  .case-card .metric {
+    @apply border-0 bg-transparent p-0;
+
+    & dt {
+      @apply text-xs sm:text-sm;
+    }
+
+    & dd {
+      @apply font-display text-3xl font-bold sm:text-4xl;
+    }
+  }
+
+  /* "View case study →" hint; the whole card is already the link. */
+  .case-cue {
+    @apply inline-flex items-center gap-2 font-semibold text-accent;
+
+    & span {
+      @apply motion-safe:transition-transform;
+    }
+
+    .case-card:hover & span {
+      @apply translate-x-1;
+    }
   }
 
   .metric-grid {
