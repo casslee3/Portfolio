@@ -91,11 +91,21 @@
     @apply flex min-h-11 items-center gap-2 rounded-full font-display text-xl font-bold text-accent;
 
     & svg {
-      @apply size-8 shrink-0 motion-safe:transition-transform motion-safe:duration-500;
+      @apply size-8 shrink-0;
     }
+  }
 
-    &:hover svg {
-      @apply rotate-36;
+  /* Slow, continuous spin for the flower icon. Off under reduced motion and
+     paused (with the waves) by the hero's pause button. */
+  @media (prefers-reduced-motion: no-preference) {
+    .flower-spin {
+      animation: flower-spin 12s linear infinite;
+    }
+  }
+
+  @keyframes flower-spin {
+    to {
+      transform: rotate(1turn);
     }
   }
 
@@ -158,7 +168,7 @@
     animation-direction: reverse;
   }
 
-  .waves-paused .wave-layer {
+  .motion-paused :is(.wave-layer, .flower-spin) {
     animation-play-state: paused;
   }
 
