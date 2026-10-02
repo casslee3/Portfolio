@@ -34,6 +34,7 @@ src/js/main.js          JS entry: wires up the modules below
 src/js/theme.js         Light/dark toggle (persists choice, follows OS by default)
 src/js/nav.js           Mobile menu disclosure (aria-expanded, Escape to close)
 src/js/typewriter.js    One-shot hero typing effect (skipped for reduced motion)
+src/js/mix-bowl.js      Hero "What's in the mix?" bowl: ingredients spill out on hover/focus/tap
 src/js/marquee.js       Looping marquees: About skills and the Extras! photo strip (pause button)
 src/js/flowers-toggle.js Pause/play for the falling and spinning flowers
 src/js/flower-rain.js   Faint falling-flower background on the home page

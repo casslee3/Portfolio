@@ -216,29 +216,86 @@
     }
   }
 
-  /* Hero focus areas: an icon in a soft matcha circle above a short label. */
-  .focus-tile {
-    @apply flex flex-col items-center gap-3;
+  /* Hero "What's in the mix?" bowl. Without JS the ingredient chips show under
+     the bowl; mix-bowl.js adds .is-interactive, which tucks them into the bowl
+     until [data-open] (hover, focus or tap) spills them out one by one. */
+  .mix {
+    @apply flex flex-col items-center gap-5;
   }
 
-  .focus-icon {
-    @apply grid size-16 place-items-center rounded-full border border-line bg-accent-soft text-accent shadow-sm sm:size-20;
+  .mix-button {
+    @apply flex flex-col items-center gap-2 rounded-3xl p-2 text-accent;
+  }
+
+  .mix-bowl {
+    @apply grid size-28 place-items-center rounded-full bg-accent-soft shadow-sm sm:size-32;
 
     & svg {
-      @apply size-8 sm:size-10;
+      @apply w-20 sm:w-24;
+    }
+  }
+
+  .mix-bowl-body {
+    fill: var(--surface);
+  }
+
+  .mix-whisk {
+    transform-box: view-box;
+    transform-origin: 92px 4px;
+  }
+
+  .mix-label {
+    @apply text-sm font-semibold text-fg-muted;
+  }
+
+  .mix-ingredients {
+    @apply flex max-w-xl flex-wrap justify-center gap-2;
+
+    & li {
+      @apply rounded-full border border-accent/40 bg-surface px-4 py-2 font-display text-lg font-semibold text-accent shadow-sm;
+    }
+  }
+
+  .mix.is-interactive {
+    & .mix-ingredients li {
+      @apply invisible -translate-y-6 scale-50 opacity-0;
     }
 
-    @media (prefers-reduced-motion: no-preference) {
-      @apply transition-transform duration-300;
+    &[data-open] {
+      & .mix-ingredients li {
+        @apply visible translate-y-0 scale-100 opacity-100;
+      }
 
-      .focus-tile:hover & {
-        @apply -translate-y-1 rotate-[-6deg];
+      & .mix-bowl {
+        @apply scale-110;
       }
     }
   }
 
-  .focus-label {
-    @apply text-sm font-semibold text-fg-muted;
+  /* .is-ready is added a frame after setup so the first, closed state doesn't animate. */
+  @media (prefers-reduced-motion: no-preference) {
+    .mix.is-ready .mix-bowl,
+    .mix.is-ready .mix-ingredients li {
+      @apply transition-[transform,opacity,visibility] duration-500 ease-out;
+    }
+
+    .mix.is-ready .mix-ingredients li {
+      transition-delay: calc(var(--i) * 90ms);
+    }
+
+    .mix[data-open] .mix-whisk {
+      animation: whisk 0.6s ease-in-out 2;
+    }
+  }
+
+  @keyframes whisk {
+    25% {
+      transform: rotate(-14deg);
+    }
+
+    75% {
+      transform: rotate(10deg);
+    }
   }
 
   /* Decorative flowing lines behind the hero: two seamlessly tiling SVG masks
