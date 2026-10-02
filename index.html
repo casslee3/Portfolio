@@ -389,49 +389,67 @@
       </section>
 
       <!-- ============ MEDIA ============ -->
-      <section
-        id="media"
-        aria-labelledby="media-title"
-        class="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 md:grid-cols-[1fr_1.6fr] md:items-center"
-        data-cycler
-      >
-        <div class="flex flex-col items-start gap-4">
-          <p class="eyebrow">Media</p>
-          <h2 id="media-title" class="font-display text-4xl font-medium tracking-tight text-balance">
-            How I think through product design
-          </h2>
-          <p class="text-pretty text-fg-muted">
-            I focus on the decisions behind the screen: the workflow, the rules, and the moments where a product either
-            helps or gets in the way.
-          </p>
-          <button
-            type="button"
-            class="motion-toggle min-h-10 rounded-full border border-line px-4 text-sm font-medium hover:bg-surface-muted"
-            data-cycle-toggle
-            hidden
-          >
-            <span class="motion-toggle-pause">
-              <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
-              </svg>
-              Pause animation
-            </span>
-            <span class="motion-toggle-play">
-              <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-              Play animation
-            </span>
-          </button>
-        </div>
+      <section id="media" aria-labelledby="media-title" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div class="grid gap-10 md:grid-cols-[1fr_1.5fr] md:items-center">
+          <div class="flex flex-col items-start gap-4">
+            <p class="eyebrow">Media</p>
+            <h2 id="media-title" class="font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl">
+              Cherie Charms.Co
+            </h2>
+            <p class="font-semibold text-accent">Founder &amp; designer · Handcrafted jewelry</p>
+            <p class="text-pretty text-fg-muted">
+              My small business, where I design and handcraft custom wire-wrapped rings and pearl earrings, and run the
+              brand from product photography to Instagram content.
+            </p>
+            <a
+              href="https://www.instagram.com/cheriecharms.co/"
+              class="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-surface px-5 font-semibold hover:bg-surface-muted"
+              >View on Instagram <span aria-hidden="true">→</span><span class="sr-only">(@cheriecharms.co)</span></a
+            >
+          </div>
 
-        <ul class="flex flex-col gap-3 font-display text-3xl font-medium sm:text-4xl lg:text-5xl">
-          <li class="principle" data-cycle-item>Design workflows, not just UI</li>
-          <li class="principle" data-cycle-item>Optimise the most-used tasks</li>
-          <li class="principle" data-cycle-item>Ship the smallest valuable thing</li>
-          <li class="principle" data-cycle-item>Reuse before you reinvent</li>
-          <li class="principle" data-cycle-item>An edge case is a use case</li>
-        </ul>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-[1.15fr_1fr_1fr] md:grid-rows-2">
+            <img
+              src="/images/cherie-charms/ring-box-960.webp"
+              srcset="/images/cherie-charms/ring-box-480.webp 480w, /images/cherie-charms/ring-box-960.webp 960w"
+              sizes="(min-width: 768px) 25vw, 100vw"
+              alt="Eight handmade gold wire rings, some woven with pastel beads and one with beaded cherries, displayed in a cream velvet ring box"
+              loading="lazy"
+              decoding="async"
+              class="media-photo col-span-2 aspect-[4/3] md:col-span-1 md:row-span-2 md:aspect-auto md:h-full"
+            />
+            <img
+              src="/images/cherie-charms/worn-960.webp"
+              srcset="/images/cherie-charms/worn-480.webp 480w, /images/cherie-charms/worn-960.webp 960w"
+              sizes="(min-width: 768px) 20vw, 50vw"
+              alt="A gold wire ring woven with soft blue beads, worn on a hand"
+              loading="lazy"
+              decoding="async"
+              class="media-photo aspect-square"
+            />
+            <img
+              src="/images/cherie-charms/lavender-960.webp"
+              srcset="/images/cherie-charms/lavender-480.webp 480w, /images/cherie-charms/lavender-960.webp 960w"
+              sizes="(min-width: 768px) 20vw, 50vw"
+              alt="Two twisted gold wire rings, one beaded in mint, resting on linen beside dried lavender"
+              loading="lazy"
+              decoding="async"
+              class="media-photo aspect-square"
+            />
+            <img
+              src="/images/cherie-charms/pearl-earrings-960.webp"
+              srcset="
+                /images/cherie-charms/pearl-earrings-480.webp 480w,
+                /images/cherie-charms/pearl-earrings-960.webp 960w
+              "
+              sizes="(min-width: 768px) 40vw, 100vw"
+              alt="A pair of gold hook earrings with two freshwater pearls each"
+              loading="lazy"
+              decoding="async"
+              class="media-photo col-span-2 aspect-[2/1] object-[50%_45%]"
+            />
+          </div>
+        </div>
       </section>
 
       <!-- ============ ABOUT ============ -->

@@ -343,11 +343,12 @@
     }
   }
 
-  .principle {
-    @apply text-fg-muted motion-safe:transition-colors motion-safe:duration-500;
+  /* Media section photo collage: rounded frames that lift slightly on hover. */
+  .media-photo {
+    @apply size-full rounded-3xl border-4 border-accent-soft object-cover shadow-lg shadow-black/5;
 
-    &[data-current] {
-      @apply text-accent;
+    @media (prefers-reduced-motion: no-preference) {
+      @apply transition-transform duration-300 hover:-translate-y-1;
     }
   }
 
