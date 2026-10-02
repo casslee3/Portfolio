@@ -141,7 +141,7 @@
     @apply shrink-0 rounded-full border border-line px-3 py-1;
   }
 
-  /* Marquee (About skills, Extras! film strip). Without JS or with reduced
+  /* Marquee (About skills, Extras! photo strip). Without JS or with reduced
      motion the list simply wraps; src/js/marquee.js adds .is-scrolling plus
      hidden copies of the list so the row can loop seamlessly. Hovering or
      .is-paused (set by an optional pause button) stops it. */
@@ -164,34 +164,17 @@
     }
   }
 
-  /* Extras! film strip: photo frames on a dark strip with sprocket holes, full
-     viewport width, rolling via the marquee above. */
+  /* Extras! photo strip: full viewport width, rolling via the marquee above. */
   .filmstrip {
     @apply relative left-1/2 w-screen -translate-x-1/2;
-    /* Lighter in dark mode so the canvas-coloured sprocket holes still show. */
-    --film: light-dark(#161613, #2c3026);
 
     & .marquee.is-scrolling {
       mask-image: none;
     }
 
     & .marquee-list {
-      @apply justify-center gap-0 bg-(--film) px-0 py-7;
+      @apply justify-center gap-0;
       --marquee-duration: 40s;
-
-      /* Sprocket holes along the top and bottom edges. */
-      background-image:
-        linear-gradient(90deg, var(--canvas) 0 12px, transparent 12px),
-        linear-gradient(90deg, var(--canvas) 0 12px, transparent 12px);
-      /* 24px spacing divides each frame's width (192px / 240px), so the holes
-         line up where the looping copies meet. */
-      background-size:
-        24px 10px,
-        24px 10px;
-      background-position:
-        6px 9px,
-        6px calc(100% - 9px);
-      background-repeat: repeat-x;
     }
 
     & .marquee.is-scrolling .marquee-list {
@@ -203,7 +186,7 @@
     @apply shrink-0 px-2;
 
     & img {
-      @apply h-56 w-44 rounded-sm object-cover sm:h-72 sm:w-56;
+      @apply h-56 w-44 rounded-2xl object-cover sm:h-72 sm:w-56;
     }
   }
 

@@ -34,7 +34,7 @@ src/js/main.js          JS entry: wires up the modules below
 src/js/theme.js         Light/dark toggle (persists choice, follows OS by default)
 src/js/nav.js           Mobile menu disclosure (aria-expanded, Escape to close)
 src/js/typewriter.js    One-shot hero typing effect (skipped for reduced motion)
-src/js/marquee.js       Looping marquees: About skills and the Extras! film strip (pause button)
+src/js/marquee.js       Looping marquees: About skills and the Extras! photo strip (pause button)
 src/js/flowers-toggle.js Pause/play for the falling and spinning flowers
 src/js/flower-rain.js   Faint falling-flower background on the home page
 src/js/motion.js        Shared prefers-reduced-motion check

@@ -1,7 +1,7 @@
 import { prefersReducedMotion } from "./motion.js";
 
 /**
- * Looping marquee used by the About skills and the Extras! film strip. Hidden,
+ * Looping marquee used by the About skills and the Extras! photo strip. Hidden,
  * inert copies of the list follow the original until the row is wide enough to
  * loop seamlessly; screen readers and keyboards only meet the original. Skipped
  * when reduced motion is requested (the list stays static). Hovering pauses it,
