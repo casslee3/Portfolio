@@ -138,7 +138,12 @@
   }
 
   .chip {
-    @apply rounded-full border border-line px-3 py-1;
+    @apply rounded-full border border-line px-3 py-1 motion-safe:transition-colors motion-safe:duration-500;
+
+    /* Highlighted by the cycler in the About section. */
+    &[data-current] {
+      @apply border-accent bg-accent-soft text-accent;
+    }
   }
 
   .social-link {
