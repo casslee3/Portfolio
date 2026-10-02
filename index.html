@@ -249,24 +249,17 @@
         </div>
 
         <h2 class="sr-only">At a glance</h2>
-        <dl class="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4">
-          <div class="flex flex-col-reverse gap-1">
-            <dt class="text-fg-muted">Years of experience</dt>
-            <dd class="font-display text-3xl font-bold text-accent lining-nums">8+</dd>
-          </div>
-          <div class="flex flex-col-reverse gap-1">
-            <dt class="text-fg-muted">Flows designed</dt>
-            <dd class="font-display text-3xl font-bold text-accent lining-nums">400+</dd>
-          </div>
-          <div class="flex flex-col-reverse gap-1">
-            <dt class="text-fg-muted">Users impacted</dt>
-            <dd class="font-display text-3xl font-bold text-accent lining-nums">2M+</dd>
-          </div>
-          <div class="flex flex-col-reverse gap-1">
-            <dt class="text-fg-muted">Features shipped</dt>
-            <dd class="font-display text-3xl font-bold text-accent lining-nums">60+</dd>
-          </div>
-        </dl>
+        <div class="mt-16 flex flex-col items-center gap-3 text-center">
+          <p id="passions-title" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">My passions</p>
+          <ul
+            aria-labelledby="passions-title"
+            class="flex flex-col items-center gap-1 font-display text-2xl font-bold text-accent sm:flex-row sm:flex-wrap sm:justify-center sm:text-3xl"
+          >
+            <li class="passion">Digital media</li>
+            <li class="passion">Product design</li>
+            <li class="passion">Media design</li>
+          </ul>
+        </div>
 
         <button
           type="button"

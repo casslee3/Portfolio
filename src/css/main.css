@@ -123,6 +123,13 @@
     }
   }
 
+  /* Hero passions row: items separated by a decorative bar. The empty alt text
+     after "/" keeps screen readers from announcing the bar. */
+  .passion + .passion::before {
+    content: "|" / "";
+    @apply mx-4 font-normal text-fg-muted max-sm:hidden;
+  }
+
   /* Decorative flowing lines behind the hero: two seamlessly tiling SVG masks
      filled with the accent colour, drifting in opposite directions. Motion stops
      for prefers-reduced-motion and when the visitor presses pause (WCAG 2.2.2). */
