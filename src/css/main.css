@@ -141,9 +141,10 @@
     @apply shrink-0 rounded-full border border-line px-3 py-1;
   }
 
-  /* Skills marquee. Without JS or with reduced motion the list simply wraps;
-     src/js/marquee.js adds .is-scrolling plus a hidden copy of the list so the
-     row can loop seamlessly. Hovering pauses it. */
+  /* Marquee (About skills, Extras! film strip). Without JS or with reduced
+     motion the list simply wraps; src/js/marquee.js adds .is-scrolling plus
+     hidden copies of the list so the row can loop seamlessly. Hovering or
+     .is-paused (set by an optional pause button) stops it. */
   .marquee-list {
     @apply flex flex-wrap gap-2 text-sm font-medium;
   }
@@ -154,11 +155,55 @@
 
     & .marquee-list {
       @apply w-max shrink-0 flex-nowrap pe-2;
-      animation: marquee 28s linear infinite;
+      animation: marquee var(--marquee-duration, 28s) linear infinite;
     }
 
-    &:hover .marquee-list {
+    &:hover .marquee-list,
+    &.is-paused .marquee-list {
       animation-play-state: paused;
+    }
+  }
+
+  /* Extras! film strip: photo frames on a dark strip with sprocket holes, full
+     viewport width, rolling via the marquee above. */
+  .filmstrip {
+    @apply relative left-1/2 w-screen -translate-x-1/2;
+    /* Lighter in dark mode so the canvas-coloured sprocket holes still show. */
+    --film: light-dark(#161613, #2c3026);
+
+    & .marquee.is-scrolling {
+      mask-image: none;
+    }
+
+    & .marquee-list {
+      @apply justify-center gap-0 bg-(--film) px-0 py-7;
+      --marquee-duration: 40s;
+
+      /* Sprocket holes along the top and bottom edges. */
+      background-image:
+        linear-gradient(90deg, var(--canvas) 0 12px, transparent 12px),
+        linear-gradient(90deg, var(--canvas) 0 12px, transparent 12px);
+      /* 24px spacing divides each frame's width (192px / 240px), so the holes
+         line up where the looping copies meet. */
+      background-size:
+        24px 10px,
+        24px 10px;
+      background-position:
+        6px 9px,
+        6px calc(100% - 9px);
+      background-repeat: repeat-x;
+    }
+
+    & .marquee.is-scrolling .marquee-list {
+      @apply pe-0;
+    }
+  }
+
+  .filmstrip-frame {
+    @apply shrink-0 px-2;
+
+    & img {
+      @apply h-56 w-44 rounded-sm object-cover sm:h-72 sm:w-56;
     }
   }
 
@@ -340,47 +385,6 @@
 
     & tbody tr:last-child td {
       @apply border-b-0;
-    }
-  }
-
-  /* Extras carousel. Without JS the slides form a simple grid; carousel.js adds
-     .is-ready to stack them so only the active slide shows (cross-fade). */
-  .carousel-viewport {
-    @apply grid gap-6 sm:grid-cols-2;
-  }
-
-  .carousel.is-ready .carousel-viewport {
-    @apply grid-cols-1;
-    grid-template-areas: "slide";
-  }
-
-  .carousel.is-ready .carousel-slide {
-    grid-area: slide;
-    @apply invisible opacity-0;
-
-    @media (prefers-reduced-motion: no-preference) {
-      @apply transition-[opacity,visibility] duration-700;
-    }
-
-    &[data-active] {
-      @apply visible opacity-100;
-    }
-  }
-
-  .carousel-button {
-    @apply inline-flex size-11 items-center justify-center gap-2 rounded-full border border-line bg-surface text-fg hover:bg-surface-muted;
-  }
-
-  .carousel-dot {
-    @apply grid size-6 place-items-center rounded-full;
-
-    &::before {
-      content: "";
-      @apply size-2.5 rounded-full border border-accent motion-safe:transition-colors;
-    }
-
-    &[aria-current]::before {
-      @apply bg-accent;
     }
   }
 
