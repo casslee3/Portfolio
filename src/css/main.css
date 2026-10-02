@@ -269,7 +269,7 @@
   }
 
   .case-link {
-    @apply after:absolute after:inset-0 after:rounded-3xl focus-visible:outline-none;
+    @apply after:absolute after:inset-0 after:z-10 after:rounded-3xl focus-visible:outline-none;
   }
 
   .metric-grid {
