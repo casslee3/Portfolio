@@ -455,7 +455,7 @@
             </p>
           </div>
 
-          <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+          <div class="flex min-w-0 flex-col gap-8">
             <section aria-labelledby="experience-title">
               <h3 id="experience-title" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">
                 Experience
@@ -476,25 +476,31 @@
               </ol>
             </section>
 
-            <section aria-labelledby="skills-title" data-cycler data-cycle-interval="1400">
+            <section
+              aria-labelledby="skills-title"
+              class="min-w-0 sm:col-span-2 md:col-span-1 lg:col-span-2"
+              data-marquee
+            >
               <h3 id="skills-title" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">What I do</h3>
-              <ul class="mt-3 flex flex-wrap gap-2 text-sm font-medium">
-                <li class="chip" data-cycle-item>Product design</li>
-                <li class="chip" data-cycle-item>Interaction design</li>
-                <li class="chip" data-cycle-item>Workflow mapping</li>
-                <li class="chip" data-cycle-item>Prototyping</li>
-                <li class="chip" data-cycle-item>Design systems</li>
-                <li class="chip" data-cycle-item>User research</li>
-                <li class="chip" data-cycle-item>Competitive analysis</li>
-                <li class="chip" data-cycle-item>Wireframing</li>
-                <li class="chip" data-cycle-item>Data analysis</li>
-                <li class="chip" data-cycle-item>Social media marketing</li>
-                <li class="chip" data-cycle-item>Brand storytelling</li>
-              </ul>
+              <div class="marquee mt-3">
+                <ul class="marquee-list">
+                  <li class="chip">Product design</li>
+                  <li class="chip">Interaction design</li>
+                  <li class="chip">Workflow mapping</li>
+                  <li class="chip">Prototyping</li>
+                  <li class="chip">Design systems</li>
+                  <li class="chip">User research</li>
+                  <li class="chip">Competitive analysis</li>
+                  <li class="chip">Wireframing</li>
+                  <li class="chip">Data analysis</li>
+                  <li class="chip">Social media marketing</li>
+                  <li class="chip">Brand storytelling</li>
+                </ul>
+              </div>
               <button
                 type="button"
                 class="motion-toggle mt-3 min-h-10 rounded-full px-3 text-sm font-medium text-fg-muted hover:bg-surface-muted hover:text-fg"
-                data-cycle-toggle
+                data-marquee-toggle
                 hidden
               >
                 <span class="motion-toggle-pause">

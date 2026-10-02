@@ -138,11 +138,34 @@
   }
 
   .chip {
-    @apply rounded-full border border-line px-3 py-1 motion-safe:transition-colors motion-safe:duration-500;
+    @apply shrink-0 rounded-full border border-line px-3 py-1;
+  }
 
-    /* Highlighted by the cycler in the About section. */
-    &[data-current] {
-      @apply border-accent bg-accent-soft text-accent;
+  /* Skills marquee. Without JS or with reduced motion the list simply wraps;
+     src/js/marquee.js adds .is-scrolling plus a hidden copy of the list so the
+     row can loop seamlessly. Hover or the pause button stops it (WCAG 2.2.2). */
+  .marquee-list {
+    @apply flex flex-wrap gap-2 text-sm font-medium;
+  }
+
+  .marquee.is-scrolling {
+    @apply flex overflow-hidden;
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+
+    & .marquee-list {
+      @apply flex-nowrap pe-2;
+      animation: marquee 28s linear infinite;
+    }
+
+    &:hover .marquee-list,
+    &.is-paused .marquee-list {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-100%);
     }
   }
 

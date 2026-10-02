@@ -1,18 +1,18 @@
 import { prefersReducedMotion } from "./motion.js";
 
-const DEFAULT_INTERVAL_MS = 2200;
+const INTERVAL_MS = 2200;
 
 /**
  * Cycles a visual highlight through a list. All items stay in the DOM and
  * readable; only styling changes (via data-current). Auto-play can be paused
  * with the root's [data-cycle-toggle] button (WCAG 2.2.2) and never starts when
- * reduced motion is requested. Set data-cycle-interval on the root to change
- * the speed.
+ * reduced motion is requested.
  */
-function initCycler(root) {
+export function initCycler(root) {
+  if (!root) return;
+
   const items = [...root.querySelectorAll("[data-cycle-item]")];
   const button = root.querySelector("[data-cycle-toggle]");
-  const interval = Number(root.dataset.cycleInterval) || DEFAULT_INTERVAL_MS;
   let index = 0;
   let timer;
 
@@ -24,7 +24,7 @@ function initCycler(root) {
     timer = setInterval(() => {
       index = (index + 1) % items.length;
       highlight();
-    }, interval);
+    }, INTERVAL_MS);
     button.removeAttribute("data-paused");
   };
 
@@ -40,9 +40,4 @@ function initCycler(root) {
 
   if (prefersReducedMotion()) pause();
   else play();
-}
-
-/** Starts every [data-cycler] list on the page. */
-export function initCyclers(roots) {
-  roots.forEach(initCycler);
 }

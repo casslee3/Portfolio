@@ -34,7 +34,8 @@ src/js/main.js          JS entry: wires up the modules below
 src/js/theme.js         Light/dark toggle (persists choice, follows OS by default)
 src/js/nav.js           Mobile menu disclosure (aria-expanded, Escape to close)
 src/js/typewriter.js    One-shot hero typing effect (skipped for reduced motion)
-src/js/cycler.js        Highlight cycle for the "How I think" list and About skills, each with a pause button
+src/js/cycler.js        "How I think" highlight cycle with a pause button
+src/js/marquee.js       Looping About skills marquee with a pause button
 src/js/flowers-toggle.js Pause/play for the falling and spinning flowers
 src/js/flower-rain.js   Faint falling-flower background on the home page
 src/js/motion.js        Shared prefers-reduced-motion check
@@ -55,7 +56,7 @@ All colours are semantic tokens in `src/css/main.css` (`bg-surface`, `text-fg-mu
 - Semantic landmarks (`header`, `nav`, `aside`, `main`, `footer`), a single `h1` and logical heading order
 - Skip link, visible `:focus-visible` ring on every control, targets ≥ 40px
 - Mobile menu is a proper disclosure button; FAQ uses native `<details>` (keyboard accessible without JS)
-- Auto-cycling principles and skills can each be paused (WCAG 2.2.2); the typing effect runs once, under 5 seconds
+- Auto-cycling principles and the skills marquee can each be paused (WCAG 2.2.2); the typing effect runs once, under 5 seconds
 - Theme toggle exposed as a pressed/unpressed button; copy feedback in a `role="status"` live region
 - Respects `prefers-reduced-motion` and `prefers-color-scheme`
 
