@@ -372,7 +372,7 @@
   /* Instant-photo frame: thick bottom border, slight tilt (--tilt) that straightens
      on hover. Each photo sets its own size (content box at its photo's aspect ratio). */
   .polaroid {
-    @apply relative shrink-0;
+    @apply relative m-0 shrink-0;
     rotate: var(--tilt, -3deg);
 
     @media (prefers-reduced-motion: no-preference) {
@@ -386,6 +386,11 @@
 
   .polaroid-photo {
     @apply border-8 border-b-[2.5rem] border-surface object-cover shadow-xl ring-1 shadow-black/15 ring-line;
+  }
+
+  /* Handwritten-style note on the frame's thick bottom border. */
+  .polaroid-caption {
+    @apply absolute inset-x-2 bottom-0 flex h-10 items-center justify-center text-center font-display text-xs leading-4 text-balance text-fg italic;
   }
 
   .polaroid-sticker {
