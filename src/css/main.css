@@ -369,17 +369,27 @@
     }
   }
 
-  /* Hero photo frame: a glowing border (neon matcha in light mode, white in dark
-     mode, via the --photo-* tokens) that brightens on hover. */
-  /* Instant-photo frame (sized for a 3:4 photo): thick bottom border, slight tilt that straightens on hover. */
+  /* Instant-photo frame (sized for a 3:4 photo) with an orchid sticker on its
+     corner. The pair is tilted slightly and straightens on hover. */
   .polaroid {
-    @apply h-[16.3rem] w-44 -rotate-3 border-8 border-b-[2.5rem] border-surface object-cover shadow-xl ring-1 shadow-black/15 ring-line;
+    @apply relative shrink-0 -rotate-3;
 
     @media (prefers-reduced-motion: no-preference) {
       @apply transition-transform duration-300 hover:rotate-0;
     }
+
+    & img {
+      @apply h-[16.3rem] w-44 border-8 border-b-[2.5rem] border-surface object-cover shadow-xl ring-1 shadow-black/15 ring-line;
+    }
   }
 
+  .polaroid-sticker {
+    @apply absolute -top-7 -right-7 size-18 rotate-12;
+    filter: drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 1.5px #fff) drop-shadow(0 3px 4px rgb(0 0 0 / 0.25));
+  }
+
+  /* Hero photo frame: a glowing border (neon matcha in light mode, white in dark
+     mode, via the --photo-* tokens) that brightens on hover. */
   .photo-glow {
     border: 4px solid var(--photo-frame);
     box-shadow:

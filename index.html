@@ -645,15 +645,30 @@
         class="bg-linear-to-br from-canvas via-canvas to-glow-1 px-4 py-14 sm:px-6"
       >
         <div class="mx-auto flex max-w-4xl flex-col items-center gap-10 md:flex-row md:justify-center md:gap-14">
-          <img
-            src="/images/contact-photo-640.webp"
-            srcset="/images/contact-photo-320.webp 320w, /images/contact-photo-640.webp 640w"
-            sizes="11rem"
-            alt="Cassandra smiling in a restaurant booth beneath a colorful painting"
-            loading="lazy"
-            decoding="async"
-            class="polaroid shrink-0"
-          />
+          <div class="polaroid">
+            <img
+              src="/images/contact-photo-640.webp"
+              srcset="/images/contact-photo-320.webp 320w, /images/contact-photo-640.webp 640w"
+              sizes="11rem"
+              alt="Cassandra smiling in a restaurant booth beneath a colorful painting"
+              loading="lazy"
+              decoding="async"
+            />
+            <svg class="polaroid-sticker" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+              <g fill="#f3c6de" stroke="#c2508f" stroke-width="1.2">
+                <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(125 32 30)" />
+                <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(-125 32 30)" />
+                <ellipse cx="32" cy="14" rx="6" ry="13" />
+                <ellipse cx="32" cy="17" rx="10" ry="12" transform="rotate(62 32 30)" />
+                <ellipse cx="32" cy="17" rx="10" ry="12" transform="rotate(-62 32 30)" />
+              </g>
+              <path
+                d="M25 33c-4 3-3.5 8.5 1 9.5 1 4 3.5 6.5 6 6.5s5-2.5 6-6.5c4.5-1 5-6.5 1-9.5-4 2.5-10 2.5-14 0Z"
+                fill="#c2508f"
+              />
+              <ellipse cx="32" cy="29" rx="2.5" ry="3.5" fill="#fff6e0" stroke="#c2508f" stroke-width="1" />
+            </svg>
+          </div>
           <div>
             <div class="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
               <p class="eyebrow">Connect</p>
