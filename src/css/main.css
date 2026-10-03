@@ -388,10 +388,12 @@
     filter: drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 1.5px #fff) drop-shadow(0 3px 4px rgb(0 0 0 / 0.25));
   }
 
-  /* Die-cut photo sticker, tilted like it was stuck on: closes the right column on
-     small screens; on wider ones it sits in space reserved below the column (pb-40). */
+  /* Die-cut photo sticker stuck on just after the About heading. It hangs off the
+     last word without taking up line width, so the heading keeps to one line; on
+     the narrowest screens, where the heading must wrap, it's hidden so it can't
+     cover the text. */
   .about-sticker {
-    @apply h-auto w-20 rotate-6 self-end drop-shadow-lg sm:w-24 md:absolute md:right-4 md:bottom-0 md:w-18;
+    @apply absolute bottom-[0.15em] left-full ml-1.5 h-auto w-8 max-w-none rotate-6 drop-shadow-lg max-[23rem]:hidden sm:ml-3 sm:w-12;
   }
 
   /* Hero photo frame: a glowing border (neon matcha in light mode, white in dark

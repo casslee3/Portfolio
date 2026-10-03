@@ -575,7 +575,21 @@
         <div class="grid gap-10 rounded-[2rem] border border-line bg-surface p-6 sm:p-10 md:grid-cols-2">
           <div class="flex flex-col items-start gap-4">
             <p class="eyebrow">About me</p>
-            <h2 id="about-title" class="font-display text-4xl font-medium tracking-tight">Nice to meet you!</h2>
+            <h2 id="about-title" class="font-display text-4xl font-medium tracking-tight">
+              Nice to meet
+              <span class="relative whitespace-nowrap"
+                >you!<img
+                  src="/images/dog-sticker-400.webp"
+                  srcset="/images/dog-sticker-200.webp 200w, /images/dog-sticker-400.webp 400w"
+                  sizes="3rem"
+                  width="200"
+                  height="385"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  class="about-sticker"
+              /></span>
+            </h2>
             <p class="text-pretty text-fg-muted">
               I’m a third-year Cognitive Science student exploring the intersection of technology, human cognition and
               design. I aspire to build intuitive, useful, human-centered products that elevate diverse perspectives.
@@ -591,7 +605,7 @@
             </p>
           </div>
 
-          <div class="flex min-w-0 flex-col gap-8 md:relative md:pb-40">
+          <div class="flex min-w-0 flex-col gap-8">
             <section aria-labelledby="experience-title">
               <h3 id="experience-title" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">
                 Experience
@@ -634,17 +648,6 @@
                 </ul>
               </div>
             </section>
-            <img
-              src="/images/dog-sticker-400.webp"
-              srcset="/images/dog-sticker-200.webp 200w, /images/dog-sticker-400.webp 400w"
-              sizes="6rem"
-              width="200"
-              height="385"
-              alt="Sticker of a smiling golden retriever"
-              loading="lazy"
-              decoding="async"
-              class="about-sticker"
-            />
           </div>
         </div>
       </section>
