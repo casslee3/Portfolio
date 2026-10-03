@@ -371,9 +371,9 @@
 
   /* Hero photo frame: a glowing border (neon matcha in light mode, white in dark
      mode, via the --photo-* tokens) that brightens on hover. */
-  /* Instant-photo frame (sized for a 3:4 photo): thick bottom border, slight tilt that straightens on hover. */
+  /* Instant-photo frame (sized for a 4:3 photo): thick bottom border, slight tilt that straightens on hover. */
   .polaroid {
-    @apply h-[16.3rem] w-44 -rotate-3 border-8 border-b-[2.5rem] border-surface object-cover shadow-xl ring-1 shadow-black/15 ring-line;
+    @apply h-[12.75rem] w-56 -rotate-3 border-8 border-b-[2.5rem] border-surface object-cover shadow-xl ring-1 shadow-black/15 ring-line;
 
     @media (prefers-reduced-motion: no-preference) {
       @apply transition-transform duration-300 hover:rotate-0;
