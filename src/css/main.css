@@ -369,7 +369,7 @@
     }
   }
 
-  /* Instant-photo frame (sized for a 3:4 photo) with an orchid sticker on its
+  /* Instant-photo frame (sized for a 3:4 photo) with a flower sticker on its
      corner. The pair is tilted slightly and straightens on hover. */
   .polaroid {
     @apply relative shrink-0 -rotate-3;
@@ -378,13 +378,13 @@
       @apply transition-transform duration-300 hover:rotate-0;
     }
 
-    & img {
+    & > img:first-child {
       @apply h-[16.3rem] w-44 border-8 border-b-[2.5rem] border-surface object-cover shadow-xl ring-1 shadow-black/15 ring-line;
     }
   }
 
   .polaroid-sticker {
-    @apply absolute -top-7 -right-7 size-18 rotate-12;
+    @apply absolute -top-8 -right-8 size-20 rotate-12;
     filter: drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 1.5px #fff) drop-shadow(0 3px 4px rgb(0 0 0 / 0.25));
   }
 
