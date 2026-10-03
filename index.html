@@ -575,21 +575,7 @@
         <div class="grid gap-10 rounded-[2rem] border border-line bg-surface p-6 sm:p-10 md:grid-cols-2">
           <div class="flex flex-col items-start gap-4">
             <p class="eyebrow">About me</p>
-            <h2 id="about-title" class="font-display text-4xl font-medium tracking-tight">
-              Nice to meet
-              <span class="relative whitespace-nowrap"
-                >you!<img
-                  src="/images/dog-sticker-400.webp"
-                  srcset="/images/dog-sticker-200.webp 200w, /images/dog-sticker-400.webp 400w"
-                  sizes="3rem"
-                  width="200"
-                  height="385"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                  class="about-sticker"
-              /></span>
-            </h2>
+            <h2 id="about-title" class="font-display text-4xl font-medium tracking-tight">Nice to meet you!</h2>
             <p class="text-pretty text-fg-muted">
               I’m a third-year Cognitive Science student exploring the intersection of technology, human cognition and
               design. I aspire to build intuitive, useful, human-centered products that elevate diverse perspectives.
@@ -610,20 +596,33 @@
               <h3 id="experience-title" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">
                 Experience
               </h3>
-              <ol class="mt-3 space-y-4">
-                <li>
-                  <p class="font-semibold">Product Manager Externship, BeReal</p>
-                  <p class="text-sm text-fg-muted">Summer <time datetime="2026">2026</time></p>
-                </li>
-                <li>
-                  <p class="font-semibold">UI/UX Design Fellow, Davis Design Interactive</p>
-                  <p class="text-sm text-fg-muted">Fall <time datetime="2025">2025</time></p>
-                </li>
-                <li>
-                  <p class="font-semibold">Social Media &amp; Graphic Designer, Solution Community</p>
-                  <p class="text-sm text-fg-muted">Summer <time datetime="2026">2026</time> · 501(c)(3) nonprofit</p>
-                </li>
-              </ol>
+              <div class="mt-3 flex flex-col gap-6 sm:flex-row sm:items-start md:flex-col lg:flex-row">
+                <ol class="flex-1 space-y-4">
+                  <li>
+                    <p class="font-semibold">Product Manager Externship, BeReal</p>
+                    <p class="text-sm text-fg-muted">Summer <time datetime="2026">2026</time></p>
+                  </li>
+                  <li>
+                    <p class="font-semibold">UI/UX Design Fellow, Davis Design Interactive</p>
+                    <p class="text-sm text-fg-muted">Fall <time datetime="2025">2025</time></p>
+                  </li>
+                  <li>
+                    <p class="font-semibold">Social Media &amp; Graphic Designer, Solution Community</p>
+                    <p class="text-sm text-fg-muted">Summer <time datetime="2026">2026</time> · 501(c)(3) nonprofit</p>
+                  </li>
+                </ol>
+                <div class="polaroid self-end [--tilt:3deg] sm:self-auto md:self-end lg:self-auto">
+                  <img
+                    src="/images/dog-photo-480.webp"
+                    srcset="/images/dog-photo-240.webp 240w, /images/dog-photo-480.webp 480w"
+                    sizes="7rem"
+                    alt="A smiling golden retriever on a trail overlooking the Golden Gate Bridge"
+                    loading="lazy"
+                    decoding="async"
+                    class="polaroid-photo h-[12.35rem] w-32"
+                  />
+                </div>
+              </div>
             </section>
 
             <section
@@ -667,6 +666,7 @@
               alt="Cassandra smiling in a restaurant booth beneath a colorful painting"
               loading="lazy"
               decoding="async"
+              class="polaroid-photo h-[16.3rem] w-44"
             />
             <img
               src="/images/flower-sticker-320.webp"

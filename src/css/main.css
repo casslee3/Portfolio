@@ -369,31 +369,28 @@
     }
   }
 
-  /* Instant-photo frame (sized for a 3:4 photo) with a flower sticker on its
-     corner. The pair is tilted slightly and straightens on hover. */
+  /* Instant-photo frame: thick bottom border, slight tilt (--tilt) that straightens
+     on hover. Each photo sets its own size (content box at its photo's aspect ratio). */
   .polaroid {
-    @apply relative shrink-0 -rotate-3;
+    @apply relative shrink-0;
+    rotate: var(--tilt, -3deg);
 
     @media (prefers-reduced-motion: no-preference) {
-      @apply transition-transform duration-300 hover:rotate-0;
-    }
+      @apply transition-[rotate] duration-300;
 
-    & > img:first-child {
-      @apply h-[16.3rem] w-44 border-8 border-b-[2.5rem] border-surface object-cover shadow-xl ring-1 shadow-black/15 ring-line;
+      &:hover {
+        rotate: 0deg;
+      }
     }
+  }
+
+  .polaroid-photo {
+    @apply border-8 border-b-[2.5rem] border-surface object-cover shadow-xl ring-1 shadow-black/15 ring-line;
   }
 
   .polaroid-sticker {
     @apply absolute -top-8 -right-8 size-20 rotate-12;
     filter: drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 1.5px #fff) drop-shadow(0 3px 4px rgb(0 0 0 / 0.25));
-  }
-
-  /* Die-cut photo sticker stuck on just after the About heading. It hangs off the
-     last word without taking up line width, so the heading keeps to one line; on
-     the narrowest screens, where the heading must wrap, it's hidden so it can't
-     cover the text. */
-  .about-sticker {
-    @apply absolute bottom-[0.15em] left-full ml-1.5 h-auto w-8 max-w-none rotate-6 drop-shadow-lg max-[23rem]:hidden sm:ml-3 sm:w-12;
   }
 
   /* Hero photo frame: a glowing border (neon matcha in light mode, white in dark
