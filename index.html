@@ -572,18 +572,7 @@
 
       <!-- ============ ABOUT ============ -->
       <section id="about" aria-labelledby="about-title" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <div class="relative grid gap-10 rounded-[2rem] border border-line bg-surface p-6 sm:p-10 md:grid-cols-2">
-          <img
-            src="/images/dog-sticker-400.webp"
-            srcset="/images/dog-sticker-200.webp 200w, /images/dog-sticker-400.webp 400w"
-            sizes="6rem"
-            width="200"
-            height="385"
-            alt="Sticker of a smiling golden retriever"
-            loading="lazy"
-            decoding="async"
-            class="about-sticker"
-          />
+        <div class="grid gap-10 rounded-[2rem] border border-line bg-surface p-6 sm:p-10 md:grid-cols-2">
           <div class="flex flex-col items-start gap-4">
             <p class="eyebrow">About me</p>
             <h2 id="about-title" class="font-display text-4xl font-medium tracking-tight">Nice to meet you!</h2>
@@ -602,7 +591,7 @@
             </p>
           </div>
 
-          <div class="flex min-w-0 flex-col gap-8">
+          <div class="flex min-w-0 flex-col gap-8 md:relative md:pb-40">
             <section aria-labelledby="experience-title">
               <h3 id="experience-title" class="text-sm font-semibold tracking-wide text-fg-muted uppercase">
                 Experience
@@ -645,6 +634,17 @@
                 </ul>
               </div>
             </section>
+            <img
+              src="/images/dog-sticker-400.webp"
+              srcset="/images/dog-sticker-200.webp 200w, /images/dog-sticker-400.webp 400w"
+              sizes="6rem"
+              width="200"
+              height="385"
+              alt="Sticker of a smiling golden retriever"
+              loading="lazy"
+              decoding="async"
+              class="about-sticker"
+            />
           </div>
         </div>
       </section>
