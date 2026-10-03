@@ -27,6 +27,11 @@
   --on-accent: light-dark(#ffffff, #16200b);
   --glow-1: light-dark(#dcebc4, #1d2e14);
   --glow-2: light-dark(#f4eedb, #23211a);
+  /* Die-cut photo sticker peeking over the top-right corner of the About card. */
+  .about-sticker {
+    @apply pointer-events-none absolute -top-24 right-4 h-auto w-20 rotate-6 drop-shadow-lg sm:-top-28 sm:right-10 sm:w-24;
+  }
+
   /* Hero photo frame: neon matcha in light mode, white in dark mode. */
   --photo-frame: light-dark(#a3c26b, #ffffff);
   --photo-glow: light-dark(rgb(163 194 107 / 0.8), rgb(255 255 255 / 0.85));
